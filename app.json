@@ -49,8 +49,7 @@
         "required": false
       },
       "HEROKU_APP_NAME": {
-        "description": "اسم التطبيق أول مربع كتبته خلي هنا نفسه وحروف صغيرة"
-",
+        "description": "اسم التطبيق أول مربع كتبته خلي هنا نفسه وحروف صغيرة",
         "value": "",
         "required": false
       },
