@@ -23,8 +23,7 @@
         "required": true
       },
       "BOT_TOKEN": {
-        "description": "هنا ضع توكن بوتك الذي صنعته
-",
+        "description": "ضع هنا توكن البوت الذي صنعته"
         "value": "",
         "required": true
       },
