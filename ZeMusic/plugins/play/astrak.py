@@ -20,7 +20,7 @@ async def checker(_: Client, message: Message):
     user_id = message.from_user.id
     user = message.from_user.first_name
     markup = Markup([
-        [Button("「𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾」ま", url=f"https://t.me/{channel}")]
+        [Button("「اضغط هنا للاشتراك في قناه السورس", url=f"https://t.me/{channel}")]
     ])
     await message.reply(
         f"عذرًا عزيزي {user}عليك الإشتراك بقناة السور أولا.",
