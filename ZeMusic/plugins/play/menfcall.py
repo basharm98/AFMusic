@@ -48,7 +48,7 @@ async def strcall(client, message):
             text +=f"{k}➤{user.mention}➤{mut}\n"
         text += f"\nعددهم : {len(participants)}\n✔️"    
         await message.reply(f"{text}")
-app.on_message(filters.video_chat_started)
+@app.on_message(filters.video_chat_started)
 async def brah(client, message):
        await message.reply("• قــام الادمــــن بــفــتــح الــمــحــادثــه الـصـوتـيـه ✓")
 @app.on_message(filters.video_chat_ended)
