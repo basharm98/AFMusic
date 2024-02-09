@@ -50,10 +50,10 @@ async def strcall(client, message):
         await message.reply(f"{text}")
 @app.on_message(filters.video_chat_started)
 async def brah(client, message):
-       await message.reply(" قــام الادمــــن بــفــتــح الــمــحــادثــه الـصـوتـيـه ✓")
+       await message.reply(" بدأت المحادثة الصوتية 👤")
 @app.on_message(filters.video_chat_ended)
 async def brah2(client, message):
-       await message.reply("• قــام الادمــــن بـقـفـل الــمــحــادثــه الـصـوتـيـه ✗")
+       await message.reply("• تم انهاء المحادثه الصوتية 🙁")
 @app.on_message(filters.video_chat_members_invited)
 async def fuckoff(client, message):
            text = f"• قــــام ← {message.from_user.mention}"
