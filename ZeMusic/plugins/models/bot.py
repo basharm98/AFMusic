@@ -3,7 +3,7 @@ import asyncio
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import filters, Client
 from ZeMusic import app
-from config.config import OWNER_ID
+from config import OWNER_ID
 
 @app.on_message(filters.command(['بوت'], prefixes=""))
 async def Italymusic(client: Client, message: Message):
