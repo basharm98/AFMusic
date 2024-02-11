@@ -51,7 +51,7 @@ async def strcall(client, message):
 @app.on_message(filters.video_chat_started)
 async def brah(client, message):
        await message.reply(" بدأت المحادثة الصوتية 👤")
-@@app.on_message(filters.video_chat_ended)
+@app.on_message(filters.video_chat_ended)
 async def time_for_call(client, message):
     da = message.video_chat_ended.duration
     ma = divmod(da, 60)
