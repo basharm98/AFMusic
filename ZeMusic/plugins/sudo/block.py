@@ -9,7 +9,7 @@ from ZeMusic.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
-@app.on_message(filters.command(["block"]) & SUDOERS)
+@app.on_message(filters.command(["بلوك"]) & SUDOERS)
 @language
 async def useradd(client, message: Message, _):
     if not message.reply_to_message:
@@ -23,7 +23,7 @@ async def useradd(client, message: Message, _):
     await message.reply_text(_["block_2"].format(user.mention))
 
 
-@app.on_message(filters.command(["unblock"]) & SUDOERS)
+@app.on_message(filters.command(["الغاء بلوك"]) & SUDOERS)
 @language
 async def userdel(client, message: Message, _):
     if not message.reply_to_message:
