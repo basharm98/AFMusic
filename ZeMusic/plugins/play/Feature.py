@@ -5,7 +5,7 @@ import asyncio
 import os
 import time
 import requests
-from config import START_IMG_URL
+from config import START_VIDEO_URL
 from pyrogram import filters
 import random
 from pyrogram import Client
