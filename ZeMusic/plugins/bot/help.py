@@ -8,7 +8,7 @@ from ZeMusic.utils import help_pannel
 from ZeMusic.utils.database import get_lang
 from ZeMusic.utils.decorators.language import LanguageStart, languageCB
 from ZeMusic.utils.inline.help import help_back_markup, private_help_panel
-from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
+from config import BANNED_USERS, START_VIDEO_URL, SUPPORT_CHAT
 from strings import get_string, helpers
 
 
