@@ -26,11 +26,11 @@ def private_panel(_):
         ],
         [InlineKeyboardButton(text="«{الاوامر}»", callback_data="settings_back_helper")],
         [
-            InlineKeyboardButton(text="«{مطور البوت}»", user_id=config.OWNER_ID),
-            InlineKeyboardButton(text="«{الدعم}»", url=config.SUPPORT_CHAT),
+            InlineKeyboardButton(text="«ᗪEᐯEᒪOᑭEᖇ ˼”»", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="ᑕᕼᗩᑎᑎEᒪ", url=config.SUPPORT_CHANNEL),
         ],
         [
-            InlineKeyboardButton(text="«{قناه المطور}»", url=config.SUPPORT_CHANNEL),
+         
             InlineKeyboardButton(text="ْ𓆩⧛ َ 𝘼َِ𝙁َِ𝙍َِ𝙊َِ𝙊َِ𝙏َِ𝙊ِ ┇ عـ๋͜‏ـۂفــ͡ـࢪتوُ ⧚𓆪", url=f"https://t.me/VVYVVJ"),
         ],
     ]
