@@ -23,7 +23,7 @@
         "required": true
       },
       "BOT_TOKEN": {
-        "description": "حط هنا توكن البوت",
+        "description": "A Bot's token from Botfather",
         "value": "",
         "required": true
       },
@@ -33,27 +33,28 @@
         "required": true
       },
       "OWNER_ID": {
-        "description": "ايدي المطور.",
+        "description": "The user id of user whom you would like to add as OWNER.",
         "value": "",
         "required": true
       },
       "STRING_SESSION": {
-        "description": "جلسه بايوجرام2 من البوت دا @C_5_bbot.",
+        "description": "A Pyrogram v2 String Session from @C_5_bbot on Telegram.",
         "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
         "description": 
        "هنا ضع الايبي كي الخاص بحساب هيروكو من هذا الرابط https://dashboard.heroku.com/account",
-        "value": ""
-        "required": true
+        "value": "",
+        "required": false
       },
       "HEROKU_APP_NAME": {
         "description": "اسم التطبيق أول مربع كتبته خلي هنا نفسه وحروف صغيرة.",
-        "value": ""
+        "value": "",
         "required": false
+      },
       "LOGGER_ID": {
-        "description": " حط هنا ايدي محموعه السجل وارفع البوت ادمن ودخل المساعد وافتح الم٩ادثه الصوتيه.",
+        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
         "value": "",
         "required": true
       }
