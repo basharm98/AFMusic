@@ -46,7 +46,7 @@
         "description": 
        "هنا ضع الايبي كي الخاص بحساب هيروكو من هذا الرابط https://dashboard.heroku.com/account",
         "value": ""
-        "re
+        "required": true
       },
       "HEROKU_APP_NAME": {
         "description": "اسم التطبيق أول مربع كتبته خلي هنا نفسه وحروف صغيرة.",
