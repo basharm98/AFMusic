@@ -171,7 +171,7 @@ correct_answers = [
 
 current_question_index = 0
 
-@app.on_message(filters.command(["كلمه"], ""))
+@app.on_message(filters.command(["ك𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶لمه"], ""))
 async def game_handler(client: Client, message: Message):
     global current_question_index
 
