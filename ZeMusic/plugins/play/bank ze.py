@@ -153,7 +153,7 @@ def update_transfer_time(user_id):
 
 
 
-@app.on_message(command('تحويل'))
+@app.on_message(command('ت𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶حويل'))
 def transfer(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -184,7 +184,7 @@ def transfer(client, message):
 
 
 
-@app.on_message(command('استثمار'))
+@app.on_message(command('است𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ثمار'))
 def invest(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -226,7 +226,7 @@ def invest(client, message):
 
 
 
-@app.on_message(command('حظ'))
+@app.on_message(command('ح𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ظ'))
 def luck(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -266,7 +266,7 @@ def luck(client, message):
 
 
 
-@app.on_message(command("اضف") & filters.create(is_sudoer))
+@app.on_message(command("اض𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ف") & filters.create(is_sudoer))
 def add_money(client, message):
     reply_message = message.reply_to_message
     if reply_message is not None and reply_message.from_user is not None:
@@ -297,7 +297,7 @@ def add_money(client, message):
 
 
 
-@app.on_message(command("حذف حسابه") & filters.create(is_sudoer))
+@app.on_message(command("حذف ح𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶سابه") & filters.create(is_sudoer))
 def delete_account(client, message):
     reply_message = message.reply_to_message
     if reply_message is not None and reply_message.from_user is not None:
@@ -318,7 +318,7 @@ def delete_account(client, message):
 
 
 
-@app.on_message(command('حذف') & filters.create(is_sudoer))
+@app.on_message(command('حذ𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ف') & filters.create(is_sudoer))
 def delete_specific_account(client, message):
     args = message.text.split(' ')
     if len(args) == 2 and args[1].isdigit():
@@ -338,7 +338,7 @@ def delete_specific_account(client, message):
 
 
 
-@app.on_message(command('تصفير البنك') & filters.create(is_sudoer))
+@app.on_message(command('تصف𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ير البنك') & filters.create(is_sudoer))
 def reset_bank(client, message):
     bank_data = {'accounts': {}}
     save_bank_data(bank_data)
@@ -350,7 +350,7 @@ def reset_bank(client, message):
 
 
 
-@app.on_message(command('فتح لعبة البنك') & filters.create(is_sudoer))
+@app.on_message(command('فتح لعب𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ة البنك') & filters.create(is_sudoer))
 def enable_bank_game(client, message):
     chat_id = message.chat.id
     bank_data = load_bank_data()
@@ -369,7 +369,7 @@ def enable_bank_game(client, message):
 
 
 
-@app.on_message(command('قفل لعبة البنك') & filters.create(is_sudoer))
+@app.on_message(command('قفل لعب𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ة البنك') & filters.create(is_sudoer))
 def disable_bank_game(client, message):
     chat_id = message.chat.id
     bank_data = load_bank_data()
@@ -387,7 +387,7 @@ def disable_bank_game(client, message):
 
 
 
-@app.on_message(command('انشاء حساب بنكي'))
+@app.on_message(command('انشاء حس𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶اب بنكي'))
 def create_account(client, message):
     user_id = message.from_user.id
     username = message.from_user.username
@@ -412,7 +412,7 @@ def create_account(client, message):
 #######£££££££££££££££#######££££££££££#############££££££££££#########££££
 
 
-@app.on_message(command('فلوسي'))
+@app.on_message(command('فلوس𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ي'))
 def check_balance(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -429,7 +429,7 @@ def check_balance(client, message):
 
 
 
-@app.on_message(command('فلوسه'))
+@app.on_message(command('فلوس𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ه'))
 def check_user_balance(client, message):
     reply = message.reply_to_message
     if reply:
@@ -450,7 +450,7 @@ def check_user_balance(client, message):
 
 
 
-@app.on_message(command('بنكي'))
+@app.on_message(command('بن𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶كي'))
 def view_account(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -468,7 +468,7 @@ def view_account(client, message):
 
 
 
-@app.on_message(command('بنكه'))
+@app.on_message(command('بنك𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ه'))
 def view_user_account(client, message):
     reply = message.reply_to_message
     if reply:
@@ -517,7 +517,7 @@ def update_operation_time(user_id):
 
 
 
-@app.on_message(command(['مضاعفة', 'مضاربة', 'مضاربه', 'مضاعفه']))
+@app.on_message(command(['مضاعفة', 'مض𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶اربة', 'مضار𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶به', 'م𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ضاعفه']))
 def multiply(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -578,7 +578,7 @@ def update_bribe_time(user_id):
 
 
 
-@app.on_message(command('رشوة'))
+@app.on_message(command('رش𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶وة'))
 def bribe_command(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -649,7 +649,7 @@ def update_wheel_time(user_id):
 
 
 
-@app.on_message(command("عجلة الحظ"))
+@app.on_message(command("عجل𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ة الحظ"))
 def wheel_of_fortune(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -701,7 +701,7 @@ def update_custom_tip_time(user_id):
     last_tip_times[user_id] = int(time.time())
 
 
-@app.on_message(command('بقشيش'))
+@app.on_message(command('بقش𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶يش'))
 def custom_tip_command(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -772,7 +772,7 @@ def update_salary_time(user_id):
 
 
 
-@app.on_message(command('راتب'))
+@app.on_message(command('رات𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ب'))
 def salary(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -860,7 +860,7 @@ def update_police_time(user_id):
 def update_protection_time(user_id):
     last_protection_times[user_id] = int(time.time())
 
-@app.on_message(command("سرقة"))
+@app.on_message(command("سر𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶قة"))
 def steal_money(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -890,7 +890,7 @@ def steal_money(client, message):
     else:
         client.send_message(message.chat.id, 'ليس لديك حساب بنكي')
 
-@app.on_message(command("شرطة"))
+@app.on_message(command("ش𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶رطة"))
 def police_user(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -919,7 +919,7 @@ def police_user(client, message):
     else:
         client.send_message(message.chat.id, 'ليس لديك حساب بنكي')
 
-@app.on_message(command("حماية"))
+@app.on_message(command("حم𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶اية"))
 def protect_money(client, message):
     user_id = message.from_user.id
     bank_data = load_bank_data()
@@ -948,7 +948,7 @@ def protect_money(client, message):
 
 
 
-@app.on_message(command(["توب الحراميه", "توب سرقه", "توب السرقة", "توب السرقه", "توب سرقة"]))
+@app.on_message(command(["توب الحراميه𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶", "𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶توب سرقه", "ت𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶وب السرقة", "توب السرقه𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶", "𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶توب سرقة"]))
 def top_thieves(client, message):
     bank_data = load_bank_data()
     sorted_accounts = sorted(bank_data['accounts'], key=lambda x: bank_data['accounts'][x]['thief'], reverse=True)
@@ -970,7 +970,7 @@ def top_thieves(client, message):
 
 
 
-@app.on_message(command("توب فلوس"))
+@app.on_message(command("ت𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶وب فلوس"))
 def top_money(client, message):
     bank_data = load_bank_data()
     sorted_accounts = sorted(bank_data['accounts'], key=lambda x: bank_data['accounts'][x]['balance'], reverse=True)
