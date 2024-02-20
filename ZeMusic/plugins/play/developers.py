@@ -15,23 +15,23 @@ from random import  choice, randint
 
 #          
                 
-@app.on_message(filters.command(["عفرتو","مطور السورس","مبرمج السورس","المطور"],"")
+@app.on_message(filters.command(["مطور","مطور السورس","مبرمج السورس","المطور"],"")
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/96857cb597b588139fdd5.jpg",
-        caption=f"""◉ 𝙽𝙰𝙼𝙴 : ❪[ْ𓆩⧛ َ 𝘼َِ𝙁َِ𝙍َِ𝙊َِ𝙊َِ𝙏َِ𝙊ِ ┇ عـ๋͜‏ـۂفــ͡ـࢪتوُ ⧚𓆪](https://t.me/IIUll_l)❫
-◉ 𝚄𝚂𝙴𝚁 : ❪ @IIUll_l ❫
-◉ 𝙸𝙳      : ❪ `5904216848` ❫
-◉ 𝙱𝙸𝙾    : ❪ for me (@UI_VM)  ❫""",
+        photo=f"https://telegra.ph/file/1a77a02bdb06d55051845.jpg",
+        caption=f"""◉ 𝙽𝙰𝙼𝙴 : ❪ 『 🇾🇪⃤𝐀𝐁𝐃𝐔𝐋𝐋𝐀𝐇 个 ١9 』 ❫
+◉ 𝚄𝚂𝙴𝚁 : ❪ @IC_19 ❫
+◉ 𝙸𝙳      : ❪ `5145609515` ❫
+◉ 𝙱𝙸𝙾    : ❪  حᝳᝲـلـم ᭭ㅤ𓅓  ❫""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "ْ𓆩⧛ َ 𝘼َِ𝙁َِ𝙍َِ𝙊َِ𝙊َِ𝙏َِ𝙊ِ ┇ عـ๋͜‏ـۂفــ͡ـࢪتوُ ⧚𓆪", url=f"https://t.me/IIUll_l"), 
+                        "『 🇾🇪⃤𝐀𝐁𝐃𝐔𝐋𝐋𝐀𝐇 个 ١9 』", url=f"https://t.me/IC_19"), 
                  ],[
                    InlineKeyboardButton(
-                        "「𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾」", url=f"https://t.me/UI_VM"),
+                        "『 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶 』", url=f"https://t.me/EF_19"),
                 ],
 
             ]
