@@ -36,11 +36,11 @@ from random import  choice, randint
 
 
 @app.on_message(
-    filters.command(["مميزات","مميزات عفرتو"], "")
+    filters.command(["ممkinkيزات","ممkingيزات كينج"], "")
 & filters.group
  )
 async def mmmezat(client, message):
-        await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم مميزات سورس زد إي ميوزك\n
+        await message.reply_text(f"""مرحبآ بك عزيزي » {message.from_user.mention}『 في قسم مميزات سورس زد إي ميوزك\n
 ⩹━★⊷⌯⌞ # 𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾 ⌝⌯⊶★━⩺
 
 ★قايمه مميزات سورس عفرتو
@@ -96,7 +96,7 @@ async def mmmezat(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "# 𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾 𖠛⌝⚡", url=f"https://t.me/UI_VM"),                        
+                        "# ၹ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶 𖠛⌝⚡", url=f"https://t.me/EF_19"),                        
                  ],[
                 InlineKeyboardButton(
                         "close", callback_data="close"),
