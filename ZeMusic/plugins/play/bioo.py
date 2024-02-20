@@ -9,7 +9,7 @@ from pyrogram.types import (InlineKeyboardButton,CallbackQuery,InlineKeyboardMar
 from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 
-@app.on_message(filters.command(["زخارف","الزخارف","✨زخارف"], ""))
+@app.on_message(filters.command(["𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ارف","𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶رف","✨زخا𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶"], ""))
 async def abrag(c: Client, m: Message):
     global mid
     mid = m.id
@@ -27,7 +27,7 @@ async def abrag(c: Client, m: Message):
     await m.reply_text("• مرحبآ بك عزيزي × قسم ( الزخرفه الجاهزه ) آنقر علي الازرار لآختيار برجك - 💠\n√", reply_markup=keyboard)
 
 
-@app.on_callback_query(filters.regex("^bioo1 (\\d+)$"))
+@app.on_callback_query(filters.regex("^bioo𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶1 (\\d+)$"))
 async def bioo1(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
@@ -72,7 +72,7 @@ async def bioo1(c: Client, m: CallbackQuery):
     await m.message.reply_text(abrag_text, reply_to_message_id=mid)
 
 
-@app.on_callback_query(filters.regex("^bioo2 (\\d+)$"))
+@app.on_callback_query(filters.regex("^bio𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶o2 (\\d+)$"))
 async def bioo2(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
@@ -144,7 +144,7 @@ async def bioo2(c: Client, m: CallbackQuery):
     await m.message.reply_text(abrag_text, reply_to_message_id=mid)
 
 
-@app.on_callback_query(filters.regex("^knwat1 (\\d+)$"))
+@app.on_callback_query(filters.regex("^kn𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶wat1 (\\d+)$"))
 async def knwat1(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
@@ -198,7 +198,7 @@ async def knwat1(c: Client, m: CallbackQuery):
     await m.message.reply_text(abrag_text, reply_to_message_id=mid)
 
 
-@app.on_callback_query(filters.regex("^bnat1 (\\d+)$"))
+@app.on_callback_query(filters.regex("^bna𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶t1 (\\d+)$"))
 async def bnat1(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
@@ -258,7 +258,7 @@ async def bnat1(c: Client, m: CallbackQuery):
     await m.message.reply_text(abrag_text, reply_to_message_id=mid)
 
 
-@app.on_callback_query(filters.regex("^asmaa1 (\\d+)$"))
+@app.on_callback_query(filters.regex("^asm𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶aa1 (\\d+)$"))
 async def asmaa1(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
@@ -345,7 +345,7 @@ async def asmaa1(c: Client, m: CallbackQuery):
     await m.message.reply_text(abrag_text, reply_to_message_id=mid)
     
     
-@app.on_callback_query(filters.regex("^rmows (\\d+)$"))
+@app.on_callback_query(filters.regex("^rm𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶ows (\\d+)$"))
 async def rmows(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
