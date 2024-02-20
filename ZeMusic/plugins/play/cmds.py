@@ -10,65 +10,32 @@ from ZeMusic import app
 from config import OWNER_ID, LOGGER_ID
 
 
-@app.on_message(command(["ميوزك", "الميوزك", "الاوامر"]))
-async def zdatsr(client: Client, message: Message):
-    usr = await client.get_users(OWNER_ID)
-    name = usr.first_name
-    usrnam = usr.username
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/04b2f1f1c808dc49db35b.jpg",
-        caption=f"""<b>» مرحبـاً بك عـزيـزي </b> {message.from_user.mention} .\n\n<b>» استخـدم الازرار بالاسفـل 𝄞\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "• اوامــر التشغيــل •", callback_data="zzzll"),
-                ],[
-                    InlineKeyboardButton(
-                        "• اوامـر القنـاة •", callback_data="zzzch"),
-                    InlineKeyboardButton(
-                        "• اوامـر الادمـن •", callback_data="zzzad"),
-                ],[
-                    InlineKeyboardButton(
-                        "• اوامــر المطــور •", callback_data="zzzdv"),
-                ],[
-                    InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
-                ],[
-                    InlineKeyboardButton(
-                        "•✯ 「𝙰𝙵𝚁𝙾𝚃𝙾𝙾 𝙼𝚞𝚂𝙸𝙲」 ✯•", url="https://t.me/UI_VM"),
-                ],
-            ]
-        ),
-    )
-
-
-@app.on_message(command(["مطور", "المطور"]) & filters.group)
+@app.on_message(filters.command(["مطور", "المطور"]) & filters.group)
 async def zilzal(client: Client, message: Message):
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
     usrnam = usr.username
     async for photo in client.iter_profile_photos(OWNER_ID, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""ٴ<b>•────‌‌‏✯ ʑ_ᴍᴜsɪᴄ ✯──‌‌‏─‌‌‏─•</b>
-                    
-- 𝚆𝙾𝙽𝙴𝚁 :[{usr.first_name}](https://t.me/{OWNER})
+        await message.reply_photo(
+            photo.file_id,
+            caption=f"""ٴ<b>•────‌‌‏✯ ʑ_ᴍᴜsɪᴄ ✯──‌‌‏─‌‌‏─•</b>
+            
+- 𝚆𝙾𝙽𝙴𝚁 :[{usr.first_name}](https://t.me/{usrnam})
 - 𝚄𝚂𝙴𝚁 :@{usrnam} 
 - 𝙸𝙳 :`{usr.id}`
  
-ٴ<b>•────‌‌‏✯ ʑ_ᴍᴜsɪᴄ ✯──‌‌‏─‌‌‏─•</b> """, 
-reply_markup=InlineKeyboardMarkup(
-          [               
-            [            
-              InlineKeyboardButton (name, url=f"https://t.me/{usrnam}"),
-            ],[
-              InlineKeyboardButton("•✯ ᴢᴛʜᴏɴ_ᴍᴜsɪᴄ ✯•", url="https://t.me/UI_VM"),
-            ],
-          ]
-       )                 
-    )                    
-                    sender_id = message.from_user.id
-                    sender_name = message.from_user.first_name
-                    senderuser = message.from_user.username
-                    sender_user = "@{senderuser}" if senderuser else "لا يوجـد"
-                    await app.send_message(OWNER_ID, f"- المستخـدم {message.from_user.mention} يناديـك \n\n- الاسـم : {sender_name} \n- الايـدي : {sender_id}\n- اليـوزر : {sender_user}")
-                    return await app.send_message(LOGGER_ID, f"- المستخـدم {message.from_user.mention} يناديـك \n\n- الاسـم : {sender_name} \n- الايـدي : {sender_id}\n- اليـوزر : {sender_user}")
-      
+ٴ<b>•────‌‌‏✯ ʑ_ᴍᴜsɪᴄ ✯──‌‌‏─‌‌‏─•</b> """,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [InlineKeyboardButton(name, url=f"https://t.me/{usrnam}")],
+                    [InlineKeyboardButton("•✯ ᴢᴛʜᴏɴ_ᴍᴜsɪᴄ ✯•", url="https://t.me/EF_19")],
+                ]
+            )
+        )
+        
+    sender_id = message.from_user.id
+    sender_name = message.from_user.first_name
+    senderuser = message.from_user.username
+    sender_user = f"@{senderuser}" if senderuser else "لا يوجد"
+    await app.send_message(OWNER_ID, f"- المستخدم {message.from_user.mention} يناديـك \n\n- الاسـم : {sender_name} \n- الايـدي : {sender_id}\n- اليـوزر : {sender_user}")
+    await app.send_message(LOGGER_ID, f"- المستخـدم {message.from_user.mention} يناديـك \n\n- الاسـم : {sender_name} \n- الايـدي : {sender_id}\n- اليـوزر : {sender_user}")
