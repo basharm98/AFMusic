@@ -11,20 +11,20 @@ async def ZeMusic(client: Client, message: Message):
     bot_username = me.username
     bot_name = me.first_name
     italy = message.from_user.mention
-    button = InlineKeyboardButton("اضف البوت الي مجموعتك🏅", url=f"https://t.me/{bot_username}?startgroup=true")
+    button = InlineKeyboardButton("اضف البوت الى مجموعتك🏅", url=f"https://t.me/{bot_username}?startgroup=true")
     keyboard = InlineKeyboardMarkup([[button]])
     user_id = message.from_user.id
     chat_id = message.chat.id
     try:
         member = await client.get_chat_member(chat_id, user_id)
-        if user_id == 5904216848:
-             rank = "**يالهوي ده مالك السورس بنفسو ياعيال في البار😱⚡️**"
+        if user_id == 5145609515:
+             rank = "** مالك الس‍‌ورس 🫶🏻 **"
         elif user_id == OWNER_ID:
-             rank = "مـالك الـبوت العظمه 🫡⚡️"
+             rank = "مـالك الـبوت العظمه 🫡"
         elif member.status == 'creator':
-             rank = "**مـالك الـبـار 🫡⚡️**"
+             rank = "**مـالك الـبـار 🫡.**"
         elif member.status == 'administrator':
-             rank = "**مـشـرف الـبـار🫡⚡️**"
+             rank = "**مـشـرف الـبـار🫡**"
         else:
              rank = "**لاسف انت عضو فقير🥺💔**"
     except Exception as e:
