@@ -61,8 +61,8 @@ def stream_markup_timer(_, chat_id, played, dur):
                 callback_data="GetTimer",
             )
         ],[
-            InlineKeyboardButton(text="ᯓ إستئناف", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="ᯓ إيقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="ᯓإستئناف", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="إيقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="ᯓ إعاده", callback_data=f"ADMIN Replay|{chat_id}"),
         ],[
             InlineKeyboardButton(text="ᯓ تخطي", callback_data=f"ADMIN Skip|{chat_id}"),
@@ -79,7 +79,7 @@ def stream_markup(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(text="ᯓ إستئناف", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="ᯓ إيقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="إيقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="ᯓ إعادة", callback_data=f"ADMIN Replay|{chat_id}"),
         ],[
             InlineKeyboardButton(text="ᯓ تخطي", callback_data=f"ADMIN Skip|{chat_id}"),
