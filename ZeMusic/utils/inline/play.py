@@ -61,16 +61,16 @@ def stream_markup_timer(_, chat_id, played, dur):
                 callback_data="GetTimer",
             )
         ],[
-            InlineKeyboardButton(text="ᯓ إستئناف ", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="ᯓ إقاف مؤقت ", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="ᯓ اعاده ", callback_data=f"ADMIN Replay|{chat_id}"),
+            InlineKeyboardButton(text="ᯓ إستئناف", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="ᯓ إيقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="ᯓ إعاده", callback_data=f"ADMIN Replay|{chat_id}"),
         ],[
-            InlineKeyboardButton(text="ᯓ تخطي ‌", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="ᯓ توقف ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="ᯓ تخطي", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="ᯓ توقف", callback_data=f"ADMIN Stop|{chat_id}"),
         ],[
             InlineKeyboardButton(text="『 🇾🇪⃤𝐀𝐁𝐃𝐔𝐋𝐋𝐀𝐇 个 ١9 』", url=f"https://t.me/IC_19"),
         ],[
-            InlineKeyboardButton(text="『 اضف البوت الي مجموعتك او قناتك 』", url=f"https://t.me/{app.username}?startgroup=true")],
+            InlineKeyboardButton(text="『 اضف البوت الى مجموعتك او قناتك 』", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
     return buttons
 
@@ -78,16 +78,16 @@ def stream_markup_timer(_, chat_id, played, dur):
 def stream_markup(_, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(text="ᯓ إستئناف  ", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="ᯓ إيقاف مؤقت ", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="ᯓ إعادة ", callback_data=f"ADMIN Replay|{chat_id}"),
+            InlineKeyboardButton(text="ᯓ إستئناف", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="ᯓ إيقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="ᯓ إعادة", callback_data=f"ADMIN Replay|{chat_id}"),
         ],[
-            InlineKeyboardButton(text="ᯓ تخطي ‌", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="ᯓ ترقف ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="ᯓ تخطي", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="ᯓ توقف", callback_data=f"ADMIN Stop|{chat_id}"),
         ],[
             InlineKeyboardButton(text="『 🇾🇪⃤𝐀𝐁𝐃𝐔𝐋𝐋𝐀𝐇 个 ١9 』", url=f"https://t.me/IC_19"),
         ],[
-            InlineKeyboardButton(text="『 اضف البوت الي مجموعتك او قناتك 』", url=f"https://t.me/{app.username}?startgroup=true")],
+            InlineKeyboardButton(text="『 اضف البوت الى مجموعتك او قناتك 』", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
     return buttons
 
