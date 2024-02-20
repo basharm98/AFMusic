@@ -8,18 +8,18 @@ def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ᗩᗪᗪ ᗰE TO YOᑌᖇ GᖇOᑌᑭ",
+                text="『 أضفني إلى مجموعتك 』",
                 url=f"https://t.me/{app.username}?startgroup=true",
             )
         ],
-        [InlineKeyboardButton(text="父 الأوامر 父", callback_data="settings_back_helper")],
+        [InlineKeyboardButton(text="『 الأوامر 』", callback_data="settings_back_helper")],
         [
-            InlineKeyboardButton(text="ᗪEᐯEᒪOᑭEᖇ", user_id=config.OWNER_ID),
-            InlineKeyboardButton(text="ᑕᕼᗩᑎᑎEᒪ", url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text="『 المطور 』", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="『 السورس 』", url=config.SUPPORT_CHANNEL),
         ],
         [
          
-            InlineKeyboardButton(text="ْ𓆩⧛ َ 𝘼َِ𝙁َِ𝙍َِ𝙊َِ𝙊َِ𝙏َِ𝙊ِ ┇ عـ๋͜‏ـۂفــ͡ـࢪتوُ ⧚𓆪", url=f"https://t.me/VVYVVJ"),
+            InlineKeyboardButton(text="『 🇾🇪⃤𝐀𝐁𝐃𝐔𝐋𝐋𝐀𝐇 个 ١9 』", url=f"https://t.me/IC_19"),
         ],
     ]
     return buttons
@@ -29,18 +29,18 @@ def private_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ᗩᗪᗪ ᗰE TO YOᑌᖇ GᖇOᑌᑭ",
+                text="『 أضفني إلى مجموعتك 』",
                 url=f"https://t.me/{app.username}?startgroup=true",
             )
         ],
-        [InlineKeyboardButton(text="父 الأوامر 父", callback_data="settings_back_helper")],
+        [InlineKeyboardButton(text="『 الأوامر 』", callback_data="settings_back_helper")],
         [
-            InlineKeyboardButton(text="ᗪEᐯEᒪOᑭEᖇ", user_id=config.OWNER_ID),
-            InlineKeyboardButton(text="ᑕᕼᗩᑎᑎEᒪ", url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text="『 المطور 』", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="『 السورس 』", url=config.SUPPORT_CHANNEL),
         ],
         [
          
-            InlineKeyboardButton(text="ْ𓆩⧛ َ 𝘼َِ𝙁َِ𝙍َِ𝙊َِ𝙊َِ𝙏َِ𝙊ِ ┇ عـ๋͜‏ـۂفــ͡ـࢪتوُ ⧚𓆪", url=f"https://t.me/VVYVVJ"),
+            InlineKeyboardButton(text="『 🇾🇪⃤𝐀𝐁𝐃𝐔𝐋𝐋𝐀𝐇 个 ١9 』", url=f"https://t.me/IC_19"),
         ],
     ]
     return buttons
