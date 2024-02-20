@@ -473,7 +473,7 @@ txt = [
         
 
 
-@app.on_message(filters.command(["اسال","س","سوال"], ""))
+@app.on_message(filters.command(["اسkigال","سkinhl","سkingوال"], ""))
 
 
 async def soal(client: Client, message: Message):
