@@ -38,7 +38,7 @@ async def huhh(client: Client, message: Message):
                         "‹ ᥉υρρ᥆ᖇƚ›", url=f"https://t.me/GY_19"),
                 ],[
                     InlineKeyboardButton(
-                        "‹ اضف البوت لمجموعتك ›", url=f"https://t.me/A_Rn_obot?startgroup=true"),
+                        "‹ اضف البوت لمجموعتك ›", url=f"https://t.me/IC_19BOT?startgroup=true"),
             ]
         ]
          ),
