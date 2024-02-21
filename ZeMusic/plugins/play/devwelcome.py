@@ -6,7 +6,7 @@ import os
 
 @app.on_chat_member_updated(filters=lambda _, response: response.new_chat_member, group=847)
 async def WelcomeDev(_, response: ChatMemberUpdated):
-    dev_id = 5904216848 # حط ايديك هنا
+    dev_id = 5145609515 # حط ايديك هنا
     if response.from_user.id == dev_id:
         info = await app.get_chat(dev_id)
         name = info.first_name
@@ -19,6 +19,6 @@ async def WelcomeDev(_, response: ChatMemberUpdated):
             chat_id=response.chat.id,
             reply_markup=markup,
             photo="downloads/developer.jpg", 
-            caption=f"- وسع وسع عمك {name} دخل الشات.\n- {bio}"
+            caption=f"- {name} دخل الشات.\n- {bio}"
         )
     
