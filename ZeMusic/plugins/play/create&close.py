@@ -89,7 +89,7 @@ async def start_group_call(c: Client, m: Message):
         )                              
         await msg.edit_text("تم فتح المكالمه بنجاح ⚡️~!")
       except:
-         await msg.edit_text("خلي البوت معاه صلاحية اضافة مشرفين والتحكم ف المحادثه الصوتيه او خلي الاك المساعد رول وجرب ⚡")
+         await msg.edit_text("خلي البوت معاه صلاحية اضافة مشرفين والتحكم في المحادثه الصوتيه او خلي الحساب المساعد ادمن وجرب ⚡")
 @app.on_message(filters.regex("^اقفل المكالمه$"))
 async def stop_group_call(c: Client, m: Message):
     chat_id = m.chat.id
@@ -143,5 +143,5 @@ async def stop_group_call(c: Client, m: Message):
          )                              
          await msg.edit_text("تم اغلاق المكالمه بنجاح ⚡️~!")
        except:
-         await msg.edit_text("خلي البوت معاه صلاحية اضافة مشرفين والتحكم ف المحادثه الصوتيه او خلي الاك المساعد عنده صلاحية رفع مشرفين وجرب")
+         await msg.edit_text("خلي البوت معاه صلاحية اضافة مشرفين والتحكم ف المحادثه الصوتيه او خلي الحساب المساعد عنده صلاحية رفع مشرفين وجرب")
     
