@@ -15,8 +15,7 @@ from random import  choice, randint
 
 #          
                 
-@app.on_message(filters.command(["مطور","مطور السورس","مبرمج السورس","المطور"],"")
-)
+@app.on_message(filters.command(["مطور","مطور السورس","مبرمج السورس","المطور"]))
 async def huhh(client: Client, message: Message):
     usr = await client.get_users(5145609515)
     f_name = usr.first_name
@@ -28,7 +27,7 @@ async def huhh(client: Client, message: Message):
   
     await message.reply_photo(
         photo=f"https://telegra.ph/file/1a77a02bdb06d55051845.jpg",
-        caption=f"""<b>◉ 𝙽𝙰𝙼𝙴 : ❪ [{full_name}](https://t.me/{usrnam}) ❫.\n◉ 𝙸𝙳   : ❪ `5145609515` ❫.\n◉ 𝙱𝙸𝙾  : ❪ {bio} ❫.</b>""",
+        caption=f"""◉ 𝙽𝙰𝙼𝙴 : ❪ [{full_name}](https://t.me/{usrnam}) ❫.\n◉ 𝙸𝙳   : ❪ `5145609515` ❫.\n◉ 𝙱𝙸𝙾  : ❪ {bio} ❫.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
