@@ -36,8 +36,12 @@ async def start_group_call(c: Client, m: Message):
     chat_id = m.chat.id
     assistant = await get_assistant(chat_id)
     if assistant is None:
-        await m.reply("خطأ في المساعد")
+        await app.send_message(chat_id, "خطأ في المساعد")
         return
+
+    ass = await assistant.get_me()
+    assid = ass.id
+
     msg = await app.send_message(chat_id, "جاري تشغيل المكالمه..")
     try:
         peer = await assistant.resolve_peer(chat_id)
@@ -53,16 +57,18 @@ async def start_group_call(c: Client, m: Message):
         await m.reply("تم فتح المكالمه بنجاح 𝄞~!")
     except ChatAdminRequired:
         try:
-            await c.promote_chat_member(chat_id, assistant.id, permissions=ChatPrivileges(
+            await app.promote_chat_member(chat_id, assid, privileges=ChatPrivileges(
                 can_manage_chat=False,
                 can_delete_messages=False,
-                can_manage_voice_chats=True,
+                can_manage_video_chats=True,
                 can_restrict_members=False,
                 can_change_info=False,
                 can_invite_users=False,
                 can_pin_messages=False,
                 can_promote_members=False,
             ))
+
+            peer = await assistant.resolve_peer(chat_id)
             await assistant.invoke(
                 CreateGroupCall(
                     peer=InputPeerChannel(
@@ -72,20 +78,21 @@ async def start_group_call(c: Client, m: Message):
                     random_id=assistant.rnd_id() // 9000000000,
                 )
             )
-            await c.promote_chat_member(chat_id, assistant.id, permissions=ChatPrivileges(
+
+            await app.promote_chat_member(chat_id, assid, privileges=ChatPrivileges(
                 can_manage_chat=False,
                 can_delete_messages=False,
-                can_manage_voice_chats=False,
+                can_manage_video_chats=False,
                 can_restrict_members=False,
                 can_change_info=False,
                 can_invite_users=False,
                 can_pin_messages=False,
                 can_promote_members=False,
             ))
-            await m.reply("تم فتح المكالمه بنجاح 𝄞~!")
+
+            await msg.edit_text("تم فتح المكالمه بنجاح 𝄞~!")
         except Exception as e:
-            print(e)
-            await m.reply("حدث خطأ أثناء محاولة فتح المكالمة. تأكد من صلاحيات البوت او الحساب المساعد وحاول مرة أخرى.")
+            await msg.edit_text("خطأ أثناء محاولة رفع الصلاحيات. يرجى التأكد من صلاحيات البوت أو الحساب المساعد.")
 
 @app.on_message(filters.regex(r"^(اقفل المكالمه|اقفل المكالمة|قفل المكالمه|قفل المكالمة)$"))
 async def stop_group_call(c: Client, m: Message):
