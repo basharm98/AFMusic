@@ -1,6 +1,6 @@
 {
     "name": "『 𝚂𝚄𝙾𝚁𝚂 𝙺𝙸𝙽𝙶 』",
-    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
+    "description": "〔 سـورس كينج 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶 𖤍 افضـل سـورس ميوزك  › تحديثـات متواصله › 〔 حصريـاً 〕- مطـور السـورس : 𝙰𝙱𝙳𝚄𝙻𝙻𝙰𝙷",
     "logo": "https://telegra.ph/file/1a77a02bdb06d55051845.jpg",
     "keywords": [
     "python3",
@@ -13,13 +13,13 @@
     ],
     "env": {
       "API_ID": {
-        "description": "ضع هنا ايبي ايدي https://my.telegram.org",
-        "value": "",
+        "description": "ضع هنا ايبي ايدي او اتركه كما هو.",
+        "value": "20036317",
         "required": true
       },
       "API_HASH": {
-        "description": "ضع هنا ايبي هاش https://my.telegram.org",
-        "value": "",
+        "description": "ضع هنا ايبي هاش او اتركه كما هو.",
+        "value": "986cb4ba434870a62fe96da3b5f6d411",
         "required": true
       },
       "BOT_TOKEN": {
@@ -34,12 +34,12 @@
       },
       "OWNER_ID": {
         "description": "ايدي المستخدم الذي ترغب في إضافته كمالك",
-        "value": "",
+        "value": "5145609515",
         "required": true
       },
       "STRING_SESSION": {
-        "description": "A Pyrogram v2 String Session from @C_5_bbot on Telegram.",
-        "value": "5145609515",
+        "description": "ضع هنا كود بايروجرام الحساب المساعد",
+        "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
