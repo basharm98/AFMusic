@@ -6,9 +6,9 @@ from telethon.sync import TelegramClient
 from telethon.tl.functions.users import GetFullUser
 
 # تعريف معلومات الحساب ومتغيرات أخرى
-api_id = 200363821
-api_hash = "986cb4ba434870a62fe96da3aab5f6d"
-phone_number = "+96773822517380"
+api_id = "20036317"
+api_hash = "986cb4ba434870a62fe96da3b5f6d411"
+phone_number = "+967738257380"
 session_name = "session_name"
 developer_user_id = "developer_user_id"
 
