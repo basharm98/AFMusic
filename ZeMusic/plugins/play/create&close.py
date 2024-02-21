@@ -38,11 +38,7 @@ async def start_group_call(c: Client, m: Message):
     if assistant is None:
         await app.send_message(chat_id, "خطأ في المساعد")
         return
-
-    ass = await assistant.get_me()
-    assid = ass.id
-
-    msg = await app.send_message(chat_id, "جاري تشغيل المكالمه..")
+    msg = await m.reply("جاري تشغيل المكالمه..")
     try:
         peer = await assistant.resolve_peer(chat_id)
         await assistant.invoke(
@@ -54,7 +50,7 @@ async def start_group_call(c: Client, m: Message):
                 random_id=assistant.rnd_id() // 9000000000,
             )
         )
-        await m.reply("تم فتح المكالمه بنجاح 𝄞~!")
+        await msg.edit_text("تم فتح المكالمه بنجاح 𝄞~!")
     except ChatAdminRequired:
         try:
             await app.promote_chat_member(chat_id, assid, privileges=ChatPrivileges(
