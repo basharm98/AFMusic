@@ -14,27 +14,28 @@ from random import  choice, randint
 
                 
 @app.on_message(
-    command(["سورس","‹ السورس ›","عفرتو","السورس", "سورس عفرتو"])
+    command(["سورس","‹ السورس ›","king","السورس", "سورس كينج","سورس king"])
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/04b2f1f1c808dc49db35b.jpg",
-        caption=f"""╭──── • ◈ • ────╮
-么 [َ  𝘴ꪮꪊ𝘳𝘴 ꪖᠻ𝘳ꪮ𝓽ꪮꪮ(t.me/UI_VM)
-么 [َ ᦔꫀꪜ ꪖᠻ𝘳ꪮ𝓽ꪮꪮ](t.me/IIUll_l)
-么 [َ ᥉υρρ᥆ᖇƚ ](t.me/CB_LQ)
-╰──── • ◈ • ────╯
+        photo=f"https://telegra.ph/file/1a77a02bdb06d55051845.jpg",
+        caption=f"""╭────── • ◈ • ──────╮
+
+   <b>么 ⌯ 𝚂𝙾𝚄𝚁𝙲𝙴</b> (t.me/EF_19)
+   <b>么 ⌯ 𝙳𝙴ꪜ</b>    (t.me/IC_19)
+
+╰────── • ◈ • ──────╯
 ⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼""",
         reply_markup=InlineKeyboardMarkup(
         [
             [
                     InlineKeyboardButton(
-                        "‹  ᦔꫀꪜ ꪖᠻ𝘳ꪮ𝓽ꪮꪮ . 🕷 › ", url=f"https://t.me/IIUll_l"),
+                        "‹  ᦔꫀꪜ ꪖᠻ𝘳ꪮ𝓽ꪮꪮ . 🕷 › ", url=f"https://t.me/IC_19"),
                 ],[
                     InlineKeyboardButton(
-                        "‹ ᥴ𝗁ᥲ️ꪀꪀᥱᥣ›", url=f"https://t.me/UI_VM"), 
+                        "‹ ᥴ𝗁ᥲ️ꪀꪀᥱᥣ›", url=f"https://t.me/EF_19"), 
                     InlineKeyboardButton(
-                        "‹ ᥉υρρ᥆ᖇƚ›", url=f"https://t.me/YR_HX"),
+                        "‹ ᥉υρρ᥆ᖇƚ›", url=f"https://t.me/GY_19"),
                 ],[
                     InlineKeyboardButton(
                         "‹ اضف البوت لمجموعتك ›", url=f"https://t.me/A_Rn_obot?startgroup=true"),
