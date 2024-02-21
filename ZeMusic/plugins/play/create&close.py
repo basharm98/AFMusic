@@ -85,7 +85,8 @@ async def start_group_call(c: Client, m: Message):
             await m.reply("تم فتح المكالمه بنجاح 𝄞~!")
         except Exception as e:
             print(e)
-            await m.reply("حدث خطأ أثناء محاولة فتح المكالمة. تأكد من صلاحيات البوت وحاول مرة أخرى.")
+            await m.reply("حدث خطأ أثناء محاولة فتح المكالمة. تأكد من صلاحيات البوت او الحساب المساعد وحاول مرة أخرى.")
+
 @app.on_message(filters.regex(r"^(اقفل المكالمه|اقفل المكالمة|قفل المكالمه|قفل المكالمة)$"))
 async def stop_group_call(c: Client, m: Message):
     chat_id = m.chat.id
@@ -93,9 +94,9 @@ async def stop_group_call(c: Client, m: Message):
     ass = await assistant.get_me()
     assid = ass.id
     if assistant is None:
-        await app.send_message(chat_id, "خطأ في المساعد")
+        await m.reply("خطأ في المساعد")
         return
-    msg = await app.send_message(chat_id, "جاري اغلاق المكالمه..")
+    msg = await m.reply("جاري اغلاق المكالمه..")
     try:
         if not (
            group_call := (
@@ -108,6 +109,7 @@ async def stop_group_call(c: Client, m: Message):
     except Exception as e:
       if "GROUPCALL_FORBIDDEN" in str(e):
        try:    
+         await m.reply("جاري رفع الصلاحيات...")
          await app.promote_chat_member(chat_id, assid, privileges=ChatPrivileges(
                 can_manage_chat=False,
                 can_delete_messages=False,
@@ -139,5 +141,4 @@ async def stop_group_call(c: Client, m: Message):
          )                              
          await msg.edit_text("تم اغلاق المكالمه بنجاح 𝄞~!")
        except:
-         await msg.edit_text("خلي البوت معاه صلاحية اضافة مشرفين والتحكم ف المحادثه الصوتيه او خلي الحساب المساعد عنده صلاحية رفع مشرفين وجرب")
-    
+         await msg.edit_text("خطأ أثناء محاولة رفع الصلاحيات. يرجى التأكد من صلاحيات البوت أو الحساب المساعد.")
