@@ -193,5 +193,3 @@ async def idjjdd(client, message: Message):
         return
     usr = await client.get_chat(message.from_user.id)
     await message.reply_text(f"**البايو هو\n│ \n└ʙʏ: {usr.bio}**")
-
-app.run()
