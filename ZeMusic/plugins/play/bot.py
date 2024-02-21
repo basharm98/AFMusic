@@ -4,7 +4,7 @@ from pyrogram import filters, Client
 from ZeMusic import app
 from config import OWNER_ID
 
-@app.on_message(filters.command(["بوت"], prefixes="/"))
+@app.on_message(filters.command(["بوت"], prefixes=""))
 async def ZeMusic(client: Client, message: Message):
     me = await client.get_me()
     bot_username = me.username
@@ -17,17 +17,15 @@ async def ZeMusic(client: Client, message: Message):
     try:
         member = await client.get_chat_member(chat_id, user_id)
         if user_id == 5145609515:
-             rank = "يالهوي ده مالك السورس بنفسو ياعيال في البار😱⚡️"
+             rank = "مالك ومطور السورس 🥺🫶🏻"
         elif user_id == OWNER_ID:
-             rank = "مـالك الـبوت العظمه 🫡⚡️"
-        elif member.status == "creator":
-             rank = "مـالك الـبـار 🫡⚡️"
+             rank = " مالك الـبوت 🥺❤️"
         elif member.status == "administrator":
-             rank = "مـشـرف الـبـار🫡⚡️"
+             rank = " الادمــن "
         else:
-             rank = "للاسف انت عضو فقير🥺💔"
+             rank = "للاسف انت عضو 🥺💔"
     except Exception as e:
         print(e)
         rank = "مش عرفنلو مله ده😒"
     await message.reply_text(
-        text=f"""نعم حبيبي : {italy} 🥰❤️\n**انا اسمي القميل : {bot_name} 🥺🙈\n**رتبتك هي : {rank}""", reply_markup=keyboard)
+        text=f"""⌯ نعم حبيبي : {italy} 🥰❤️\n⌯ انا اسمي : {bot_name} 🥺🙈\n⌯ رتبتك هي : {rank}""", reply_markup=keyboard)
