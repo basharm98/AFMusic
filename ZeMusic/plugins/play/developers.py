@@ -27,7 +27,7 @@ async def huhh(client: Client, message: Message):
   
     await message.reply_photo(
         photo=f"https://telegra.ph/file/1a77a02bdb06d55051845.jpg",
-        caption=f"""◉ 𝙽𝙰𝙼𝙴 : ❪ [{full_name}](https://t.me/5145609515) ❫.\n◉ 𝙸𝙳   : ❪ `5145609515` ❫.\n◉ 𝙱𝙸𝙾  : ❪ {bio} ❫.""",
+        caption=f"""◉ 𝙽𝙰𝙼𝙴 : ❪ {full_name} ❫.\n◉ 𝙸𝙳   : ❪ `5145609515` ❫.\n◉ 𝙱𝙸𝙾  : ❪ {bio} ❫.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
