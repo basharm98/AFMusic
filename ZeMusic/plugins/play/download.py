@@ -19,7 +19,7 @@ def remove_if_exists(path):
         os.remove(path)
 
 
-@app.on_message(command(["/song", "تنزيل", "تحميل"]))
+@app.on_message(command(["/song", "تنزيل", "تحميل","بحث"]))
 async def song_downloader(client, message: Message):
     query = " ".join(message.command[1:])
     m = await message.reply_text("<b>⇜ جـارِ البحث عـن المقطـع الصـوتـي . . .</b>")
@@ -51,13 +51,13 @@ async def song_downloader(client, message: Message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"𖡃 ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ ʙʏ @{app.username} "
+        rep = f"𖡃 ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ ʙʏ \n@{app.username} "
         host = str(info_dict["uploader"])
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        await m.edit("<b>⇜ جـارِ الرفـع ▬▬ . . .</b>")
+        await m.edit("<b>⇜ جـارِ التحميل ▬▬ . . .</b>")
         await message.reply_audio(
             audio=audio_file,
             caption=rep,
