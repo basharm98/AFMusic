@@ -31,13 +31,6 @@ async def get_group_call(
     await app.send_message(f"**No group call Found** {err_msg}")
     return False
 
-from pyrogram import filters
-from pyrogram.types import Message
-from pyrogram.errors import ChatAdminRequired
-from pyrogram.raw.functions.phone import CreateGroupCall
-from pyrogram.raw.types import InputPeerChannel
-from pyrogram.types import ChatPermissions as ChatPrivileges
-
 @app.on_message(filters.regex(r"^(افتح المكالمه|افتح المكالمة|فتح المكالمه|فتح المكالمة)$"))
 async def start_group_call(c: Client, m: Message):
     chat_id = m.chat.id
@@ -45,6 +38,7 @@ async def start_group_call(c: Client, m: Message):
     if assistant is None:
         await m.reply("خطأ في المساعد")
         return
+    msg = await app.send_message(chat_id, "جاري تشغيل المكالمه..")
     try:
         peer = await assistant.resolve_peer(chat_id)
         await assistant.invoke(
@@ -56,7 +50,7 @@ async def start_group_call(c: Client, m: Message):
                 random_id=assistant.rnd_id() // 9000000000,
             )
         )
-        await m.reply("تم فتح المكالمه بنجاح ⚡️~!")
+        await m.reply("تم فتح المكالمه بنجاح 𝄞~!")
     except ChatAdminRequired:
         try:
             await c.promote_chat_member(chat_id, assistant.id, permissions=ChatPrivileges(
@@ -88,7 +82,7 @@ async def start_group_call(c: Client, m: Message):
                 can_pin_messages=False,
                 can_promote_members=False,
             ))
-            await m.reply("تم فتح المكالمه بنجاح ⚡️~!")
+            await m.reply("تم فتح المكالمه بنجاح 𝄞~!")
         except Exception as e:
             print(e)
             await m.reply("حدث خطأ أثناء محاولة فتح المكالمة. تأكد من صلاحيات البوت وحاول مرة أخرى.")
@@ -110,7 +104,7 @@ async def stop_group_call(c: Client, m: Message):
         ):  
            return
         await assistant.invoke(DiscardGroupCall(call=group_call))
-        await msg.edit_text("تم اغلاق المكالمه بنجاح ⚡️~!")
+        await msg.edit_text("تم اغلاق المكالمه بنجاح 𝄞~!")
     except Exception as e:
       if "GROUPCALL_FORBIDDEN" in str(e):
        try:    
@@ -143,7 +137,7 @@ async def stop_group_call(c: Client, m: Message):
             can_promote_members=False,
             ),
          )                              
-         await msg.edit_text("تم اغلاق المكالمه بنجاح ⚡️~!")
+         await msg.edit_text("تم اغلاق المكالمه بنجاح 𝄞~!")
        except:
          await msg.edit_text("خلي البوت معاه صلاحية اضافة مشرفين والتحكم ف المحادثه الصوتيه او خلي الحساب المساعد عنده صلاحية رفع مشرفين وجرب")
     
