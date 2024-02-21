@@ -19,13 +19,16 @@ from random import  choice, randint
 )
 async def huhh(client: Client, message: Message):
     usr = await client.get_users(5145609515)
-    name = usr.first_name
+    f_name = usr.first_name
     l_name = usr.last_name
     usrnam = usr.username
     bio = usr.bio
+
+    full_name = f"{f_name} {l_name}" if l_name else f_name
+  
     await message.reply_photo(
         photo=f"https://telegra.ph/file/1a77a02bdb06d55051845.jpg",
-        caption=f"""<b>◉ 𝙽𝙰𝙼𝙴 : ❪ {message.from_user.mention} ❫.\n◉ 𝙸𝙳   : ❪ `5145609515` ❫.\n◉ 𝙱𝙸𝙾  : ❪ {bio} ❫.</b>""",
+        caption=f"""<b>◉ 𝙽𝙰𝙼𝙴 : ❪ [{full_name}](https://t.me/{usrnam}) ❫.\n◉ 𝙸𝙳   : ❪ `5145609515` ❫.\n◉ 𝙱𝙸𝙾  : ❪ {bio} ❫.</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
