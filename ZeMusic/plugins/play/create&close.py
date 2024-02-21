@@ -52,7 +52,7 @@ async def start_group_call(c: Client, m: Message):
                 random_id=assistant.rnd_id() // 9000000000,
             )
         )
-        await msg.edit_text("تم فتح المكالمه بنجاح ⚡️~!")
+        await message.reply("تم فتح المكالمه بنجاح ⚡️~!")
     except ChatAdminRequired:
       try:    
         await app.promote_chat_member(chat_id, assid, privileges=ChatPrivileges(
