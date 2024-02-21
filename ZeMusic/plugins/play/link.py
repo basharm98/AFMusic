@@ -9,6 +9,6 @@ async def invitelink(client, message):
     try:
         invitelink = await client.export_chat_invite_link(chid)
     except:
-        return await message.reply_text("قم برفعي مسؤول في المجموعة أولا ؟")
-    await message.reply_text(f"**تم إنشاء رابط الدعوة بنجاح :**\n {invitelink}")
+        return await message.reply_text("<b>قم برفعي مسؤول في المجموعة أولا ؟</b>")
+    await message.reply_text(f"<b>تم إنشاء رابط الدعوة بنجاح :</b>\n {invitelink}")
     
