@@ -11,7 +11,6 @@ from ZeMusic.misc import sudo
 from ZeMusic.plugins import ALL_MODULES
 from ZeMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
-from ZeMusic.plugins.play.azan import azkar
 
 
 async def init():
