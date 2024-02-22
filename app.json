@@ -13,12 +13,12 @@
     ],
     "env": {
       "API_ID": {
-        "description": "ضع هنا ايبي ايدي او اتركه كما هو.",
+        "description": "اتركه كما هو.",
         "value": "20036317",
         "required": true
       },
       "API_HASH": {
-        "description": "ضع هنا ايبي هاش او اتركه كما هو.",
+        "description": "اتركه كما هو.",
         "value": "986cb4ba434870a62fe96da3b5f6d411",
         "required": true
       },
@@ -28,7 +28,7 @@
         "required": true
       },
       "MONGO_DB_URI": {
-        "description": "لا تغيره. او قم بانشاء قاعده البيانات. الشرح https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/mongodb.",
+        "description": "لا تغيره. او قم بانشاء قاعده البيانات. الشرح https://t.me/EF_19/2.",
         "value": "mongodb+srv://abood:king@cluster0.rbp1cqz.mongodb.net/?retryWrites=true&w=majority",
         "required": true
       },
