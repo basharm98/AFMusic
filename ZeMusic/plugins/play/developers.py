@@ -1,5 +1,4 @@
 import asyncio
-import telebot
 
 import os
 import time
