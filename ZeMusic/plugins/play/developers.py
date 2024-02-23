@@ -15,9 +15,8 @@ from random import  choice, randint
 
 #          
                 
-@app.on_message(filters.command(["مطور","مطور السورس","مبرمج السورس","المطور"],"")
-)
-async def huhh(client: Client, message: Message):
+def Identification_(message: Message):
+    user_ = message.from_user
     msg_text = message.text
     if (
         msg_text in ["المطور", "مطور"]
@@ -40,13 +39,16 @@ async def huhh(client: Client, message: Message):
 ✯︙𝙸𝙳 : {bio.id} .
 ✯︙𝙱𝙸𝙾 :  {bio.bio}) ."""
         try:
-            await message.reply_photo(
-                photo=Photo_user,
+            bot.send_photo(
+                Photo_user,
+                reply_to_message_id=message.id,
                 caption=ttxt,
                 reply_markup=Mrk(),
             )
         except:
-            await message.reply_text(
-                text=ttxt,
+            bot.send_message(
+                ttxt,
+                reply_to_message_id=message.id,
                 reply_markup=Get_prerson(name=bio.first_name, id=bio.id),
             )
+
