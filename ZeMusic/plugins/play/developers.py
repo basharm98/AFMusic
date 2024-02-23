@@ -1,4 +1,5 @@
 import asyncio
+import telebot
 
 import os
 import time
@@ -18,23 +19,35 @@ from random import  choice, randint
 @app.on_message(filters.command(["مطور","مطور السورس","مبرمج السورس","المطور"],"")
 )
 async def huhh(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/1a77a02bdb06d55051845.jpg",
-        caption=f"""<b>◉ 𝙽𝙰𝙼𝙴 : ❪ 🇾🇪⃤𝐀𝐁𝐃𝐔𝐋𝐋𝐀𝐇 个 ١9 ❫</b>
-<b>◉ 𝙸𝙳   : ❪ 5145609515 ❫</b>
-<b>◉ 𝚄𝚂𝙴𝚁 : ❪ @IC_19 ❫</b>""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "『 🇾🇪⃤𝐀𝐁𝐃𝐔𝐋𝐋𝐀𝐇 个 ١9 』", url=f"https://t.me/IC_19"), 
-                 ],[
-                   InlineKeyboardButton(
-                        "『 𝙺𝙸𝙽𝙶 𝚂𝙾𝚄𝚁𝙲𝙴 』", url=f"https://t.me/EF_19"),
-                ],
+    msg_text = message.text
+    if (
+        msg_text in ["المطور", "مطور"]
+    ):
+        
+        def Mrk():
+            mrk = InlineKeyboardMarkup()
+            btn = InlineKeyboardButton(
+                text=chan_inf.title if chan_inf.title else chan_inf.first_name,
+                url="https://t.me/" + chan_inf.username,
+            )
+            mrk.add(btn)
+            return mrk
 
-            ]
-
-        ),
-
-    )
+        # استخدم المعرف "5145609515" لجلب معلومات المستخدم
+        bio = bot.get_chat(5145609515)
+        Photo_user = f"https://t.me/{bio.username}"
+        ttxt = f"""✯︙𝙽𝙰𝙼𝙴 : {bio.first_name}
+✯︙𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 : @{bio.username}
+✯︙𝙸𝙳 : {bio.id} .
+✯︙𝙱𝙸𝙾 :  {bio.bio}) ."""
+        try:
+            await message.reply_photo(
+                photo=Photo_user,
+                caption=ttxt,
+                reply_markup=Mrk(),
+            )
+        except:
+            await message.reply_text(
+                text=ttxt,
+                reply_markup=Get_prerson(name=bio.first_name, id=bio.id),
+            )
