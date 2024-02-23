@@ -1,5 +1,6 @@
-
 import telebot
+from telebot.types import *
+from telebot.handler_backends import ContinueHandling
 import random
 
 
