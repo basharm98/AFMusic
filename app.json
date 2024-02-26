@@ -9,7 +9,9 @@
     "ze",
     "MusicBot",
     "telegram-bot",
-    "pyrogram"
+    "pyrogram",
+	"python",
+	"telethon"
     ],
     "env": {
       "API_ID": {
@@ -22,7 +24,7 @@
         "value": "986cb4ba434870a62fe96da3b5f6d411",
         "required": true
       },
-      "BOT_TOKEN": {
+      "ELHYBA","BOT_TOKEN": {
         "description": "ضع هنا تكون البوت الذي صنعته من @BotFather.",
         "value": "",
         "required": true
@@ -32,7 +34,7 @@
         "value": "",
         "required": true
       },
-      "OWNER_ID": {
+      "OWNER","OWNER_ID": {
         "description": "ايدي المستخدم الذي ترغب في إضافته كمالك",
         "value": "5145609515",
         "required": true
