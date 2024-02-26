@@ -24,7 +24,7 @@
         "value": "986cb4ba434870a62fe96da3b5f6d411",
         "required": true
       },
-      "ELHYBA","BOT_TOKEN": {
+      "BOT_TOKEN": {
         "description": "ضع هنا تكون البوت الذي صنعته من @BotFather.",
         "value": "",
         "required": true
@@ -34,7 +34,7 @@
         "value": "",
         "required": true
       },
-      "OWNER","OWNER_ID": {
+      "OWNER_ID": {
         "description": "ايدي المستخدم الذي ترغب في إضافته كمالك",
         "value": "5145609515",
         "required": true
