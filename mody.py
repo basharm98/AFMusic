@@ -8,4 +8,4 @@ class Mody(object):
 
     API_HASH = os.environ.get("API_HASH", "986cb4ba434870a62fe96da3b5f6d411")
     
-    OWNER = int(os.environ.get("OWNER", 5145609515))
+    OWNER_ID = int(os.environ.get("OWNER_ID", 5145609515))
