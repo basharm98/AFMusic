@@ -10,8 +10,8 @@
     "MusicBot",
     "telegram-bot",
     "pyrogram",
-	"python",
-	"telethon"
+    "python",
+    "telethon"
     ],
     "env": {
       "API_ID": {
