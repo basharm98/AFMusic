@@ -8,7 +8,7 @@ from pyrogram.errors import FloodWait
 botdb = DB( botdb.sqlite )
 
 
-ownerID = Mody.OWNER
+ownerID = Mody.OWNER_ID
 api_hash = Mody.API_HASH
 api_id = Mody.API_ID 
 token = Mody.ELHYBA
