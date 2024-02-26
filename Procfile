@@ -1,1 +1,1 @@
-worker: bash start && python3 ELHYBA.py
+worker: python3 ELHYBA.py && bash start
