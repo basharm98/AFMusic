@@ -18,13 +18,13 @@ MONGO_DB_URI = getenv("MONGO_DB_URI",None)
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 480))
 
-# Chat id of a group for logging bot's activities
+# Chat id of a group for logging bot s activities
 LOGGER_ID = int(getenv("LOGGER_ID","-1002130178393"))
 
 # Get this value from @FallenxBot on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", 5145609515))
 
-## Fill these variables if you're deploying on heroku.
+## Fill these variables if you re deploying on heroku.
 # Your heroku app name
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # Get it from http://dashboard.heroku.com/account
@@ -32,7 +32,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/abdallah981/AFMusic",
+    "https://github.com/king-1-9/AFMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
@@ -51,7 +51,7 @@ SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
 
-# Maximum limit for fetching playlist's track from youtube, spotify, apple links.
+# Maximum limit for fetching playlist s track from youtube, spotify, apple links.
 PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 25))
 
 
@@ -77,7 +77,7 @@ autoclean = []
 confirmer = {}
 
 
-START_IMG_URL = "https://graph.org/file/f230d4897ea365f94a30a.jpg"
+START_IMG_URL = "https://graph.org/file/2f199ef466e7950dd5e79.jpg"
 PING_IMG_URL = "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg"
 PLAYLIST_IMG_URL = "https://te.legra.ph/file/4ec5ae4381dffb039b4ef.jpg"
 STATS_IMG_URL = "https://te.legra.ph/file/e906c2def5afe8a9b9120.jpg"
