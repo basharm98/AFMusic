@@ -10,7 +10,11 @@ from config import OWNER_ID
                                        
                                        
 @app.on_callback_query(filters.regex("zzzback"))
-async def zzzback(_, query: CallbackQuery):
+async def zzzback(_, query: CallbackQuery, client: Client, message: Message):
+   usr = await client.get_users(OWNER_ID)
+   name = usr.first_name
+   usrnam = usr.username
+  
    await query.edit_message_text(
        f"""<b>» مرحبـاً بك عـزيـزي </b> {message.from_user.mention} .\n\n<b>» استخـدم الازرار بالاسفـل 𝄞\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
         reply_markup=InlineKeyboardMarkup(
@@ -26,6 +30,8 @@ async def zzzback(_, query: CallbackQuery):
                 ],[
                     InlineKeyboardButton(
                         "• اوامــر المطــور •", callback_data="zzzdv"),
+                ],[
+                    InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
                 ],[
                     InlineKeyboardButton(
                         "•✯ 『 𝙺𝙸𝙽𝙶 𝙼𝚄𝚂𝙸𝙲 』 ✯•", url="https://t.me/EF_19"),
