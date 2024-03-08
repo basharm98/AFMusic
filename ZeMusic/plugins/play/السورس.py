@@ -19,8 +19,9 @@ from random import  choice, randint
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/89a5af2a6c71dcd0cf555.jpg",
-        caption = f"""**مرحبا بك في . .\u200b\n [سورس الملك ⛧](https://t.me/EF_19)**""",
-        reply_markup=InlineKeyboardMarkup(
+        caption = f"""<b>مرحبا بك في . .<br>
+<a href="https://t.me/EF_19">سورس الملك ⛧</a></b>""",
+reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
