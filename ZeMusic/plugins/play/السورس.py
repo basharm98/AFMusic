@@ -8,8 +8,8 @@ import random
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from strings.filters import command
-from AlexaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AlexaMusic import app
+from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from ZeMusic import app
 from random import  choice, randint
 
                 
