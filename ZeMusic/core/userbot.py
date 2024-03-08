@@ -67,7 +67,7 @@ class Userbot(Client):
             self.one.name = self.one.me.mention
             self.one.username = self.one.me.username
             assistantids.append(self.one.id)
-            LOGGER(__name__).info(f"تم تشغيل البوت على سورس الملك 🥺💕 as {self.one.name}")
+            LOGGER(__name__).info(f"تم تنصيب البوت على سورس الملك بنجاح 🥂🫀 as {self.one.name}")
 
         if config.STRING2:
             await self.two.start()
