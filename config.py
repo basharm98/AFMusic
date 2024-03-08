@@ -1,6 +1,6 @@
 import re
 from os import getenv
-
+from .config import *
 from dotenv import load_dotenv
 from pyrogram import filters
 
