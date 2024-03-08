@@ -11,7 +11,7 @@ from cmds import Global_message
                                        
 @app.on_callback_query(filters.regex("zzzback"))
 async def zzzback(_, query: CallbackQuery):
-   user_mention = global_message.from_user.mention
+   user_mention = Global_message.from_user.mention
    await query.edit_message_text(
        f"""<b>» مرحبـاً بك عـزيـزي </b> {user_mention} .\n\n<b>» استخـدم الازرار بالاسفـل 𝄞\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
         reply_markup=InlineKeyboardMarkup(
