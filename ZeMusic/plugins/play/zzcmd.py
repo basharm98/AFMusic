@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardButton
 from ZeMusic import app
 from ZeMusic.misc import HAPP, SUDOERS, XCB
 from config import OWNER_ID
-from cmds import global_message                                       
+from cmds import Global_message                                       
                                        
 @app.on_callback_query(filters.regex("zzzback"))
 async def zzzback(_, query: CallbackQuery):
