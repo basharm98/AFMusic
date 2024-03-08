@@ -19,7 +19,10 @@ MONGO_DB_URI = getenv("MONGO_DB_URI",None)
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 480))
 
 # Chat id of a group for logging bot s activities
-LOGGER_ID = int(getenv("LOGGER_ID","-1002130178393"))
+LOGGER_ID = int(getenv("LOGGER_ID","-1001756578463"))
+
+# A name for your Music bot.
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
 
 # Get this value from @FallenxBot on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", 5145609515))
@@ -45,6 +48,7 @@ SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/GY_19")
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
 
+PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
 
 # Get this credentials from https://developer.spotify.com/dashboard
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
@@ -72,8 +76,11 @@ STRING5 = getenv("STRING_SESSION5", None)
 BANNED_USERS = filters.user()
 adminlist = {}
 lyrical = {}
+chatstats = {}
 votemode = {}
 autoclean = []
+userstats = {}
+clean = {}
 confirmer = {}
 
 
