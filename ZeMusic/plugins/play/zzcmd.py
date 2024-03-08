@@ -7,13 +7,12 @@ from pyrogram.types import InlineKeyboardButton
 from ZeMusic import app
 from ZeMusic.misc import HAPP, SUDOERS, XCB
 from config import OWNER_ID
-from cmds import Global_message                                       
+                                       
                                        
 @app.on_callback_query(filters.regex("zzzback"))
 async def zzzback(_, query: CallbackQuery):
-   user_mention = Global_message.from_user.mention
    await query.edit_message_text(
-       f"""<b>» مرحبـاً بك عـزيـزي </b> {user_mention} .\n\n<b>» استخـدم الازرار بالاسفـل 𝄞\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
+       f"""<b>» مرحبـاً بك عـزيـزي </b> .\n\n<b>» استخـدم الازرار بالاسفـل 𝄞\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
