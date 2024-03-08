@@ -7,8 +7,8 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID","25281175"))
-API_HASH = getenv("API_HASH","6d99cb2b60a2c519fc1f99bd19565730")
+API_ID = int(getenv("API_ID","20036317"))
+API_HASH = getenv("API_HASH","986cb4ba434870a62fe96da3b5f6d411")
 
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
@@ -22,7 +22,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 480))
 LOGGER_ID = int(getenv("LOGGER_ID"))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 6581896306))
+OWNER_ID = int(getenv("OWNER_ID", 5145609515))
 
 ## Fill these variables if you re deploying on heroku.
 # Your heroku app name
@@ -39,8 +39,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Source_Ze")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/ZeSupport")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/EF_19")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/GY_19")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -77,7 +77,7 @@ autoclean = []
 confirmer = {}
 
 
-START_IMG_URL = "https://telegra.ph/file/41a777f089288f7ad2571.jpg"
+START_IMG_URL = "https://graph.org/file/2f199ef466e7950dd5e79.jpg"
 PING_IMG_URL = "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg"
 PLAYLIST_IMG_URL = "https://te.legra.ph/file/4ec5ae4381dffb039b4ef.jpg"
 STATS_IMG_URL = "https://te.legra.ph/file/e906c2def5afe8a9b9120.jpg"
