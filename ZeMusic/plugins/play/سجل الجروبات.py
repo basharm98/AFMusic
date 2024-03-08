@@ -18,7 +18,9 @@ async def lul_message(chat_id: int, message: str):
 @app.on_message(filters.new_chat_members)
 async def on_new_chat_members(client: Client, message: Message):
     if (await client.get_me()).id in [user.id for user in message.new_chat_members]:
-        added_by = message.from_user.first_name if message.from_user else "ᴜɴᴋɴᴏᴡɴ ᴜsᴇʀ"
+        added_by = message.from_user.first_name if message.from_user else "مستخدم غير معروف"
+        added_id = message.from_user.id
+
         matlabi_jhanto = message.chat.title
         served_chats = len(await get_served_chats())
         chat_id = message.chat.id
@@ -26,5 +28,5 @@ async def on_new_chat_members(client: Client, message: Message):
             chatusername = f"@{message.chat.username}"
         else:
             chatusername = "ᴩʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
-        lemda_text = f"🌹 ʙᴏᴛ ᴀᴅᴅᴇᴅ ᴛᴏ ɴᴇᴡ ɢʀᴏᴜᴘ ..\n\n┏━━━━━━━━━━━━━━━━━┓\n┣★ **ᴄʜᴀᴛ** › : {matlabi_jhanto}\n┣★ **ᴄʜᴀᴛ ɪᴅ** › : {chat_id}\n┣★ **ᴄʜᴀᴛ ᴜɴᴀᴍᴇ** › : {chatusername}\n┣★ **ᴛᴏᴛᴀʟ ᴄʜᴀᴛ** › : {served_chats}\n┣★ **ᴀᴅᴅᴇᴅ ʙʏ** › :\n┗━━━ {added_by}"
+        lemda_text = f"🌹 ʙᴏᴛ ᴀᴅᴅᴇᴅ ᴛᴏ ɴᴇᴡ ɢʀᴏᴜᴘ ..\n\n┏━━━━━━━━━━━━━━━━━┓\n┣★ <b>ᴄʜᴀᴛ</b> › : {matlabi_jhanto}\n┣★ <b>ᴄʜᴀᴛ ɪᴅ</b> › : {chat_id}\n┣★ <b>ᴄʜᴀᴛ ᴜɴᴀᴍᴇ</b> › : {chatusername}\n┣★ <b>ᴛᴏᴛᴀʟ ᴄʜᴀᴛ</b> › : {served_chats}\n┣★ <b>ᴀᴅᴅᴇᴅ ʙʏ</b> › :\n┗━━━ <a href='tg://user?id={added_id}'>{added_by}</a>"
         await lul_message(LOGGER_ID, lemda_text)
