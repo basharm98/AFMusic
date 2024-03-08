@@ -8,10 +8,12 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from pyrogram.errors import MessageNotModified
 from ZeMusic import app
 from config import OWNER_ID, LOGGER_ID
-
+global_message = None
 
 @app.on_message(command(["ميوزك", "الميوزك", "الاوامر"]))
 async def zdatsr(client: Client, message: Message):
+    global global_message
+    global_message = message
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
     usrnam = usr.username
