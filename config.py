@@ -1,6 +1,6 @@
 import re
 from os import getenv
-from .config import *
+
 from dotenv import load_dotenv
 from pyrogram import filters
 
@@ -77,7 +77,7 @@ autoclean = []
 confirmer = {}
 
 
-START_IMG_URL = getenv("START_IMG_URL", None)
+START_IMG_URL = "https://graph.org/file/f230d4897ea365f94a30a.jpg"
 PING_IMG_URL = "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg"
 PLAYLIST_IMG_URL = "https://te.legra.ph/file/4ec5ae4381dffb039b4ef.jpg"
 TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
