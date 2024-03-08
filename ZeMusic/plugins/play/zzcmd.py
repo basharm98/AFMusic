@@ -55,7 +55,7 @@ async def mpdtsf(_, query: CallbackQuery):
                         "• الاشعــارات & المسـاعــد •", callback_data="zzzas"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzback"),
+                        "رجـوع", callback_data="zdatsr"),
                 ],
             ]
         ),
@@ -80,7 +80,7 @@ async def zzzll(_, query: CallbackQuery):
           [
                [
                     InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzback"),
+                        "رجـوع", callback_data="zdatsr"),
                ],
           ]
         ),
