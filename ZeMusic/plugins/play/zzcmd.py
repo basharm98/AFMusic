@@ -12,7 +12,7 @@ from config import OWNER_ID
 @app.on_callback_query(filters.regex("zzzback"))
 async def zzzback(_, query: CallbackQuery):
    await query.edit_message_text(
-       f"""<b>» مرحبـاً بك عـزيـزي 𝄞</b>\n<b>» استخـدم الازرار بالاسفـل\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
+       f"""<b>» مرحبـاً بك عـزيـزي </b> {message.from_user.mention} .\n\n<b>» استخـدم الازرار بالاسفـل 𝄞\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -28,7 +28,7 @@ async def zzzback(_, query: CallbackQuery):
                         "• اوامــر المطــور •", callback_data="zzzdv"),
                 ],[
                     InlineKeyboardButton(
-                        "•✯ السورس •", url="https://t.me/EF_19"),
+                        "•✯ 『 𝙺𝙸𝙽𝙶 𝙼𝚄𝚂𝙸𝙲 』 ✯•", url="https://t.me/EF_19"),
                 ],
             ]
         ),
@@ -55,7 +55,7 @@ async def mpdtsf(_, query: CallbackQuery):
                         "• الاشعــارات & المسـاعــد •", callback_data="zzzas"),
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع", callback_data="zdatsr"),
+                        "رجـوع", callback_data="zzzback"),
                 ],
             ]
         ),
@@ -80,7 +80,7 @@ async def zzzll(_, query: CallbackQuery):
           [
                [
                     InlineKeyboardButton(
-                        "رجـوع", callback_data="الميوزك"),
+                        "رجـوع", callback_data="zzzback"),
                ],
           ]
         ),
