@@ -14,6 +14,7 @@ class Mody(Client):
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
+            start_img_url=config.START_IMG_URL,
             in_memory=True,
             parse_mode=ParseMode.HTML,
             max_concurrent_transmissions=7,
