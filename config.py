@@ -21,9 +21,6 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 480))
 # Chat id of a group for logging bot s activities
 LOGGER_ID = int(getenv("LOGGER_ID","-1001756578463"))
 
-# A name for your Music bot.
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
-
 # Get this value from @FallenxBot on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", 5145609515))
 
