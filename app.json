@@ -29,6 +29,11 @@
         "value": "",
         "required": true
       },
+      "START_IMG_URL": {
+        "description": "ضع هنا رابط صوره الـ ستارت.",
+        "value": "",
+        "required": true
+      },
       "MONGO_DB_URI": {
         "description": "لا تغيره. او قم بانشاء قاعده البيانات. الشرح https://t.me/EF_19/2.",
         "value": "",
