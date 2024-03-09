@@ -5,9 +5,7 @@ from dotenv import load_dotenv
 from pyrogram import filters
 
 load_dotenv()
-token =  getenv("BOT_TOKEN")  # توكن البوت
-sudo = 1659187103 # ايدي الادمن
-ch =  'robinatz2' 
+ 
 # Get this value from my.telegram.org/apps
 API_ID = int(getenv("API_ID","20036317"))
 API_HASH = getenv("API_HASH","986cb4ba434870a62fe96da3b5f6d411")
