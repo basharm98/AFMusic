@@ -4,8 +4,7 @@ from datetime import datetime
 import config
 from ZeMusic import app
 from ZeMusic.core.call import Mody, autoend
-from ZeMusic.utils.database import (get_client, is_active_chat,
-                                       is_autoend)
+from ZeMusic.utils.database import (get_client, is_active_chat, is_autoend)
 from pyrogram.enums import ChatType
 
 async def auto_leave():
