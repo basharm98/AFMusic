@@ -26,7 +26,7 @@
       },
       "BOT_TOKEN": {
         "description": "ضع هنا تكون البوت الذي صنعته من @BotFather.",
-        "value": "6874765709:AAETG1EL2_S9K1T1A2-DA0-mxQhq0zPq8c0",
+        "value": "",
         "required": true
       },
       "MONGO_DB_URI": {
@@ -41,7 +41,7 @@
       },
       "STRING_SESSION": {
         "description": "ضع هنا كود بايروجرام الحساب المساعد",
-        "value": "BAExut0AAMw80IJ0dYl1_mGYEKtPYr7_Ub1WJp6P25Ls2c7SW9WsnK6f6K96zX6ySErQ72n4IrFizyqjdy223u2zs7FIOvSXrTt6FC3eFSvVvfSpkdmjwEVbFUY4qyfDxNT0C7PduV8YoIpl-AqFg8Dks6ujvx5g3t5-rQ-1hLCThVUOuA_l18-eDrufZQRKF7DPYipUCenkcdLkFVE56T61d67Up7cuq7xd1LoLrVgkCGsakjaB9e1WFa7yArqkCwKXdIIpA_XdMjZkxKXJULDlsM6XyOlnw_MWBIlwhjWHJ8RmDAVEfmR2FU5KKGli4OWA3H_xNZ1Z0j0YF_Pvi_DXnBAXAwAAAAB0T_8JAA",
+        "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
@@ -52,7 +52,7 @@
       },
       "HEROKU_APP_NAME": {
         "description": "اسم التطبيق أول مربع كتبته خلي هنا نفسه وحروف صغيرة.",
-        "value": "abood",
+        "value": "",
         "required": false
       },
       "LOGGER_ID": {
