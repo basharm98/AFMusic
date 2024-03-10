@@ -4,7 +4,7 @@ from pyrogram import filters, Client
 from ZeMusic import app
 from config import OWNER_ID
 
-@app.on_message(filters.command(["بوت"] & ~filters.command("بوت*")))
+@app.on_message(filters.command(["بوت*"]))
 async def ZeMusic(client: Client, message: Message):
     me = await client.get_me()
     bot_username = me.username
