@@ -20,9 +20,9 @@ async def ZeMusic(client: Client, message: Message):
              rank = "\n<b>رتبتك هي :مالك الس‍‌ورس 🫶🏻.</b>"
         elif user_id == OWNER_ID:
              rank = "\n<b>رتبتك هي :مـالك الـبوت 🫡.</b>"
-        elif member.status ==  creator :
+        elif member.status ==  'creator' :
              rank = "\n<b>رتبتك هي :المـالك 🫡.</b>"
-        elif member.status ==  administrator :
+        elif member.status ==  'administrator' :
              rank = "\n<b>رتبتك هي :مـشـرف الـبـار🫡.</b>"
         else:
              rank = ""
