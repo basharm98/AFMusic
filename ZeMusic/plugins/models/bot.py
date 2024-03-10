@@ -17,19 +17,19 @@ async def ZeMusic(client: Client, message: Message):
     try:
         member = await client.get_chat_member(chat_id, user_id)
         if user_id == 5145609515:
-             rank = "** مالك الس‍‌ورس 🫶🏻 **"
+             rank = "\n<b>رتبتك هي :مالك الس‍‌ورس 🫶🏻.</b>"
         elif user_id == OWNER_ID:
-             rank = "مـالك الـبوت العظمه 🫡"
-        elif member.status == "creator":
-             rank = "**مـالك الـبـار 🫡.**"
-        elif member.status == "administrator":
-             rank = "**مـشـرف الـبـار🫡**"
+             rank = "\n<b>رتبتك هي :مـالك الـبوت 🫡.</b>"
+        elif member.status ==  creator :
+             rank = "\n<b>رتبتك هي :المـالك 🫡.</b>"
+        elif member.status ==  administrator :
+             rank = "\n<b>رتبتك هي :مـشـرف الـبـار🫡.</b>"
         else:
-             rank = "**لاسف انت عضو فقير🥺💔**"
+             rank = ""
     except Exception as e:
         print(e)
-        rank = "مش عرفنلو مله ده😒"
+        rank = "<b>مش عرفنلو مله ده😒</b>"
 
-    await message.reply_text(f"**نعم حبيبي :** {italy} 🥰❤\n**انا اسمي القميل :** {bot_name} 🥺🙈\n**رتبتك هي :** {rank}", reply_markup=keyboard)
+    await message.reply_text(f"<b>نعم حبيبي :</b> {italy} 🥰❤\n<b>انا اسمي القميل :</b> {bot_name} 🥺🙈 {rank}", reply_markup=keyboard)
 
 #✘ ITALY MUSIC @I6ALY ✘
