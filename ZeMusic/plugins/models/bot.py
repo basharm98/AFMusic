@@ -29,7 +29,7 @@ async def ZeMusic(client: Client, message: Message):
     except Exception as e:
         print(e)
         rank = "مش عرفنلو مله ده😒"
-    async for photo in client.iter_profile_photos(limit=1):
+    async for photo in client.iter_profile_photos("me", limit=1):
         await message.reply_photo(photo.file_id, caption=f"""**نعم حبيبي :** {italy} 🥰❤\n**انا اسمي القميل :** {bot_name} 🥺🙈\n**رتبتك هي :** {rank}""", reply_markup=keyboard)
 
 #✘ ITALY MUSIC @I6ALY ✘
