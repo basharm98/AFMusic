@@ -5,7 +5,7 @@ from ZeMusic import app
 from ZeMusic.misc import SUDOERS
 from ZeMusic.utils.database import autoend_off, autoend_on
 
-@app.on_message(filters.command("المغادرة التلقائية") & SUDOERS)
+@app.on_message(filters.command("مغادرة") & SUDOERS)
 async def auto_end_stream(_, message: Message):
     usage = "<b>ᴇxᴀᴍᴘʟᴇ :</b>\n\n/المغادرة التلقائية [تفعيل | تعطيل]"
     if len(message.command) != 2:
