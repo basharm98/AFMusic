@@ -7,7 +7,7 @@ from ZeMusic.utils.database import autoend_off, autoend_on
 
 @app.on_message(filters.command("مغادرة") & SUDOERS)
 async def auto_end_stream(_, message: Message):
-    usage = "<b>ᴇxᴀᴍᴘʟᴇ :</b>\n\n/المغادرة التلقائية [تفعيل | تعطيل]"
+    usage = "<b>ᴇxᴀᴍᴘʟᴇ :</b>\n\n/مغادرة [تفعيل | تعطيل]"
     if len(message.command) != 2:
         return await message.reply_text(usage)
 
