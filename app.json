@@ -30,8 +30,8 @@
         "required": true
       },
       "START_IMG_URL": {
-        "description": "رابط صوره start.",
-        "value": "",
+        "description": "رابط صوره start او اتركه كما هو.",
+        "value": "https://graph.org/file/13b3c20fefacb19bc81f7.jpg",
         "required": true
       },
       "MONGO_DB_URI": {
