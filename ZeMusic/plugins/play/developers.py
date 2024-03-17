@@ -16,7 +16,7 @@ from random import  choice, randint
 #          
                 
 @app.on_message(
-  command(["1مطور1","مطور السورس","مبرمج السورس","المطور"])
+  command(["مطور1","مطور السورس","مبرمج السورس","المطور1"])
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
