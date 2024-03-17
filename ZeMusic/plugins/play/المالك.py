@@ -1,9 +1,8 @@
 import asyncio
-
 import os
 import time
 import requests
-from config import START_IMG_URL
+from config import START_IMG_URL, OWNER_ID
 from pyrogram import filters
 import random
 from pyrogram import Client, filters, emoji
@@ -11,19 +10,15 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from strings.filters import command
 from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from ZeMusic import app
-from random import  choice, randint
+from random import choice, randint
 
-#          
-                
 @app.on_message(
   command(["مطور","المطور"])
 )
 async def huhh(client: Client, message: Message):
-    # افتراضياً، لنفترض أن "us_id" هو ايدي المستخدم للمطور
-    us_id = "123456789"  # استبدل بالقيمة الفعلية لايدي المطور
+    us_id = OWNER_ID  # استخدام قيمة OWNER_ID من ملف config.py
 
     # احصل على معلومات المطور باستخدام الايدي المحدد
-    # يمكنك استبدال الطريقة التي تحصل بها على معلومات المطور بوظيفة أخرى
     developer_info = await client.get_users(us_id)
 
     await message.reply_photo(
