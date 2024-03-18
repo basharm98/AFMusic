@@ -11,20 +11,19 @@ from config import OWNER_ID
     command(["مطور","المطور"])
 )
 async def devid(client: Client, message: Message):
-    info = await client.get_users(OWNER_ID)
-    name = info.first_name
-    bio = info.bio
+    usr = await client.get_users(OWNER_ID)
+    name = usr.first_name
+    usrnam = usr.username
     
-    await message.download_media(info.photo.big_file_id, file_name=os.path.join("downloads", "developer.jpg"))    
     await message.reply_photo(
-        photo="downloads/developer.jpg",
-        caption=f"""<b>⌯ المطور :</b> <a href="tg://user?id={dev_id}">{name}</a>
+        photo="https://telegra.ph/file/1a77a02bdb06d55051845.jpg",
+        caption=f"""<b>⌯ المطور :</b> {message.from_user.mention}
         
-<b>⌯ البايو :</b> {bio}""",
+<b>⌯ البايو :</b> ح‍‌ل‍‌م‍‌ ☻🥂.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [ 
-                    InlineKeyboardButton(name, user_id=dev_id)
+                    InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
                 ]
             ]
         ), 
