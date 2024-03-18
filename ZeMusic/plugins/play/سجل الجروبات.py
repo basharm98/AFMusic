@@ -8,8 +8,8 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from ZeMusic import app
 from ZeMusic.utils.database import get_served_chats
-from config import LOGGER_ID
 
+LOGGER_ID = -1001756578463
 
 async def lul_message(chat_id: int, message: str):
     await app.send_message(chat_id=chat_id, text=message)
