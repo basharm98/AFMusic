@@ -15,7 +15,7 @@ from random import choice, randint
 @app.on_message(
   command(["مطور","المطور"])
 )
-async def huhh(client: Client, message: Message):
+async def dev(client: Client, message: Message):
     us_id = OWNER_ID  # استخدام قيمة OWNER_ID من ملف config.py
 
     # احصل على معلومات المطور باستخدام الايدي المحدد
