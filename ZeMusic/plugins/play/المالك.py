@@ -17,7 +17,7 @@ from random import choice, randint
 )
 async def devid(client: Client, message: Message):
     dev_id = OWNER_ID 
-    info = await message.get_chat(dev_id)
+    info = await app.get_chat(dev_id)
     name = info.first_name
     bio = info.bio
     
