@@ -11,7 +11,7 @@ from config import OWNER_ID, LOGGER_ID
 
 
 @app.on_message(command(["مطور", "المطور"]))
-async def zdatsr(client: Client, message: Message):
+async def zdat(client: Client, message: Message):
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
     usrnam = usr.username
