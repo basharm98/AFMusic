@@ -16,22 +16,22 @@ from random import choice, randint
   command(["مطور","المطور"])
 )
 async def devid(client: Client, message: Message):
-    us_id = OWNER_ID  # استخدام قيمة OWNER_ID من ملف config.py
-
-    # احصل على معلومات المطور باستخدام الايدي المحدد
-    developer_info = await client.get_users([us_id])  # قم بتمرير الايدي كقائمة واحدة
-
+    dev_id = OWNER_ID 
+    info = await message.get_chat(dev_id)
+    name = info.first_name
+    bio = info.bio
+    
+    await message.download_media(info.photo.big_file_id, file_name=os.path.join("downloads", "developer.jpg"))    
     await message.reply_photo(
-        photo=developer_info[0].photo.big_file_id,  # الحصول على الصورة من العنصر الأول في القائمة
-        caption=f"""<b>⌯ المطور :</b> <a href="tg://user?id={us_id}">{developer_info[0].first_name}</a>
+        photo="downloads/developer.jpg",
+        caption=f"""<b>⌯ المطور :</b> <a href="tg://user?id={dev_id}">{name}</a>
         
-<b>⌯ معرف المطور :</b> @{developer_info[0].username}""",
-        reply_markup=InlineKeyboardMarkup(
+<b>⌯ البايو :</b> {bio}""",
+        reply_markup = InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton(
-                        "المطور", url=f"https://t.me/{developer_info[0].username}"), 
-                 ],
+                [ 
+                    InlineKeyboardButton(name, user_id=dev_id)
+                ]
             ]
-        ),
-    )
+        ), 
+      )
