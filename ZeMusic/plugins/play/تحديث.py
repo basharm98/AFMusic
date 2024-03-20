@@ -49,7 +49,7 @@ def updater():
     return bool(changelog)
 
 
-@Client.on_message(command2(["تحديث"]))
+@Client.on_message(command2(["1تحديث"]))
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
@@ -63,7 +63,7 @@ async def update_repo(_, message: Message):
     await msg.edit("البوت **تم نحديثه**", disable_web_page_preview=True)
 
 
-@Client.on_message(command2(["اعادة تشغيل","اعاده تشغيل","اعادة التشغيل","اعاده التشغيل"]) & ~filters.edited)
+@Client.on_message(command2(["اعادة تشغيل","اعاده تشغيل","اعادة التشغيل","اعاده التشغيل1"]) & ~filters.edited)
 @sudo_users_only
 async def restart_bot(_, message: Message):
     msg = await message.reply("جاري اعادة تشغيل البوت...")
