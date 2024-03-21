@@ -1,7 +1,7 @@
 
 import asyncio
 from strings.filters import command
-from AarohiX.utils.decorators import AdminActual
+from ZeMusic.utils.decorators import AdminActual
 from pyrogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
@@ -11,7 +11,7 @@ from pyrogram.types import (
     InputMediaPhoto,
     Message,
 )
-from AarohiX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import OWNER_ID, Muntazer
@@ -38,7 +38,7 @@ async def call_dev(client: Client, message: Message):
                                      reply_markup=reply_markup)
 
     # إنشاء زر "اونلاين"
-    online_button = InlineKeyboardButton("< freedom >", url=f"https://t.me/{Muntazer}")
+    online_button = InlineKeyboardButton("< 𝙺𝙸𝙽𝙶 >", url=f"https://t.me/{Muntazer}")
     
     await message.reply_text(f"~ **تم إرسال النداء إلى مطور البوت\n\n-› Master -› @{Muntazer} .",
                              disable_web_page_preview=True,
