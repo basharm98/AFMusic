@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from AarohiX import app
+from ZeMusic import app
 from config import OWNER_ID
 
 Muntazer = "EF_19"
