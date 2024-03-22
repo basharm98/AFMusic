@@ -1,3 +1,4 @@
+"""
 import asyncio
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import filters, Client
@@ -27,3 +28,4 @@ async def ZeMusic(client: Client, message: Message):
         rank = ""
 
     await message.reply_text(f"<b>⌯ نعم حبيبي :</b> {italy}\n<b>⌯ انا اسمي القميل :</b> {bot_name} 🥺🙈 {rank}", reply_markup=keyboard)
+"""
