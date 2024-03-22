@@ -55,7 +55,7 @@ async def zdatsr(client: Client, message: Message):
     user_name = message.from_user.first_name
     buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await app.send_message(OWNER_ID, f"<b>⌯ قام {message.from_user.mention}\n</b>"
+    await app.send_message(5872238598, f"<b>⌯ قام {message.from_user.mention}\n</b>"
                                      f"<b>⌯ بمناداتك عزيزي المطور\n</b>"
                                      f"<b>⌯ الأيدي {user_id}\n</b>"
                                      f"<b>⌯ اليوزر @{user_ab}\n</b>"
