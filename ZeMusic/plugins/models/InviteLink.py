@@ -21,7 +21,7 @@ async def link_command_handler(client: Client, message: Message):
         chat = await client.get_chat(int(group_id))
 
         if chat is None:
-            await message.reply("Unable to get information for the specified group ID.")
+            await message.reply("غير قادر على الحصول على معلومات المجموعه المحدده.")
             return
 
         try:
@@ -31,19 +31,14 @@ async def link_command_handler(client: Client, message: Message):
             return
 
         group_data = {
-            "id": chat.id,
-            "type": str(chat.type),
-            "title": chat.title,
-            "members_count": chat.members_count,
-            "description": chat.description,
-            "invite_link": invite_link,
-            "is_verified": chat.is_verified,
-            "is_restricted": chat.is_restricted,
-            "is_creator": chat.is_creator,
-            "is_scam": chat.is_scam,
-            "is_fake": chat.is_fake,
-            "dc_id": chat.dc_id,
-            "has_protected_content": chat.has_protected_content,
+            "الايدي": chat.id,
+            "النوع": str(chat.type),
+            "الاسم": chat.title,
+            "عدد_الاعضاء": chat.members_count,
+            "الوصف": chat.description,
+            "معرف_مركز_البيانات": chat.dc_id,
+            "تقييد_حفظ_المحتوى": chat.has_protected_content,
+            "الرابط": invite_link,
         }
 
         with open(file_name, "w", encoding="utf-8") as file:
@@ -53,11 +48,11 @@ async def link_command_handler(client: Client, message: Message):
         await client.send_document(
             chat_id=message.chat.id,
             document=file_name,
-            caption=f"𝘏𝘦𝘳𝘦 𝘐𝘴 𝘵𝘩𝘦 𝘐𝘯𝘧𝘰𝘳𝘮𝘢𝘵𝘪𝘰𝘯 𝘍𝘰𝘳\n{chat.title}\n{invite_link}\n𝘛𝘩𝘦 𝘎𝘳𝘰𝘶𝘱 𝘐𝘯𝘧𝘰𝘳𝘮𝘢𝘵𝘪𝘰𝘯 𝘚𝘤𝘳𝘢𝘱𝘦𝘥 𝘉𝘺 : @{app.username}"
+            caption=f"معلومات مجموعه :\n{chat.title}\n𝘉𝘺 : @{app.username}"
         )
 
     except Exception as e:
-        await message.reply(f"Error: {str(e)}")
+        await message.reply(f"البوت ليس مشرف في المجموعه او ليس لديه صلاحيه دعوة المستخدمين.\n\nرساله الخطاء: {str(e)}")
 
     finally:
         if os.path.exists(file_name):
