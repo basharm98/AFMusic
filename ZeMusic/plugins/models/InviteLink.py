@@ -1,30 +1,21 @@
-from AarohiX import app
+from ZeMusic import app
 from pyrogram import Client, filters
 from pyrogram.errors import ChatIdInvalid
 from pyrogram.errors import ChatAdminRequired, ChatNotModified, ChatIdInvalid, FloodWait, InviteHashExpired, UserNotParticipant
 import os
 import json
 from pyrogram.types import Message
-from AarohiX.misc import SUDOERS
+from ZeMusic.misc import SUDOERS
 
 
-
-@app.on_message(filters.command("givelink"))
-async def give_link_command(client, message):
-    # Generate an invite link for the chat where the command is used
-    chat = message.chat.id
-    link = await app.export_chat_invite_link(chat)
-    await message.reply_text(f"Here's the invite link for this chat:\n{link}")
-
-
-@app.on_message(filters.command(["link", "invitelink"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]) & SUDOERS)
+@app.on_message(filters.command(["رابط"]) & SUDOERS)
 async def link_command_handler(client: Client, message: Message):
     if len(message.command) != 2:
-        await message.reply("Invalid usage. Correct format: /link group_id")
+        await message.reply("الاستخدام غير صحيح. يرجى استخدام الصيغة :\n\n/رابط [ايدي الجروب]")
         return
 
     group_id = message.command[1]
-    file_name = f"group_info_{group_id}.txt"
+    file_name = f"group_{group_id}.txt"
 
     try:
         chat = await client.get_chat(int(group_id))
