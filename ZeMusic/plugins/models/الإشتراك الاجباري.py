@@ -1,4 +1,5 @@
-"""from pyrogram import Client, filters
+"""
+from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 from ZeMusic import app
@@ -30,3 +31,4 @@ async def must_join_channel(app: Client, msg: Message):
                 pass
     except ChatAdminRequired:
         print(f"I m not admin in the MUST_JOIN chat {Muntazer}!")
+"""
