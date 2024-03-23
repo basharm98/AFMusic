@@ -16,10 +16,14 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import OWNER_ID
 
-muntazer = "IC_19"
 
 @app.on_message(filters.command("نادي المطور", [".", ""]) & filters.group)
 async def call_dev(client: Client, message: Message):
+
+    usm = await client.get_users(OWNER_ID)
+    mname = usm.first_name
+    musrnam = usm.username
+    
     chat = message.chat.id
     gti = message.chat.title
     chatusername = f"@{message.chat.username}"
@@ -40,7 +44,7 @@ async def call_dev(client: Client, message: Message):
                                      reply_markup=reply_markup)
 
     # إنشاء زر "اونلاين"
-    online_button = InlineKeyboardButton("『 🇾🇪⃤𝐀𝐁𝐃𝐔𝐋𝐋𝐀𝐇 个 ١9 』", url=f"https://t.me/{muntazer}")
+    online_button = InlineKeyboardButton(mname, url=f"https://t.me/{musrnam}")
     
     await message.reply_text(f"<b> ⌯ تم إرسال النداء إلى مطور البوت\n\n ⌯ Dᥱꪜ -› @{muntazer} .</b>",
                              disable_web_page_preview=True,
