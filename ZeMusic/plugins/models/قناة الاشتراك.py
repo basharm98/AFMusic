@@ -1,4 +1,5 @@
-"""from pyrogram import Client, filters
+"""
+from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from ZeMusic import app
 from config import OWNER_ID
@@ -14,3 +15,4 @@ async def must_join_channel(_, message):
                 [InlineKeyboardButton("~ 𝙺𝙸𝙽𝙶 .", url=link)]
             ])
         )
+        """
