@@ -24,7 +24,10 @@ async def on_new_chat_members(client: Client, message: Message):
         matlabi_jhanto = message.chat.title
         served_chats = len(await get_served_chats())
         chat_id = message.chat.id
-        cont = message.chat.members_count
+
+        chat = await client.get_chat(int(chat_id))
+        cont = chat.members_count
+        
         if message.chat.username:
             chatusername = f"@{message.chat.username}"
         else:
