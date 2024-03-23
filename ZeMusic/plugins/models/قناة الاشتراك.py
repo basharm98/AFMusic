@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+"""from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from ZeMusic import app
 from config import OWNER_ID
