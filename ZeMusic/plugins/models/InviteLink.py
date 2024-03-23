@@ -8,7 +8,7 @@ from pyrogram.types import Message
 from ZeMusic.misc import SUDOERS
 
 
-@app.on_message(filters.command(["رابط"]) & SUDOERS)
+@app.on_message(command(["رابط"]) & SUDOERS)
 async def link_command_handler(client: Client, message: Message):
     if len(message.command) != 2:
         await message.reply("الاستخدام غير صحيح. يرجى استخدام الصيغة :\n\n/رابط [ايدي الجروب]")
