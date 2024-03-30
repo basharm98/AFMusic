@@ -44,7 +44,7 @@ async def telegraph_upload(bot, update):
         print(error)
         return    
     await text.edit_text(
-        text=f"<b>⎉╎الــرابـط : </b><a href='https://te.legra.ph{response[0]}'>اضغــط هنـــا</a>\   \n<b>⎉╎مشاركة : </b><a href='https://telegram.me/share/url?url=https://te.legra.ph{response[0]}'>اضغــط هنـــا</a>",
+        text=f"<b>⎉╎الــرابـط : </b><a href='https://graph.org{response[0]}'>اضغــط هنـــا</a>\   \n<b>⎉╎مشاركة : </b><a href='https://telegram.me/share/url?url=https://te.legra.ph{response[0]}'>اضغــط هنـــا</a>",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton(text="✘ اغلاق ✘", callback_data="close")
