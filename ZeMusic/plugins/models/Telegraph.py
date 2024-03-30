@@ -45,7 +45,7 @@ async def telegraph_upload(bot, update):
         return    
     await text.edit_text(
         text=f"""<b>⎉╎الــرابـط : </b><a href="https://graph.org{response[0]}">اضغــط هنـــا</a>\n<b>⎉╎مشاركة : </b><a href="https://telegram.me/share/url?url=https://graph.org{response[0]}">اضغــط هنـــا</a>""",
-        link_preview=True,
+        disable_web_page_preview=False,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton(text="✘ اغلاق ✘", callback_data="close")
             ]])
