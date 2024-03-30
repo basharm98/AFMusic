@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from telegraph import upload_file
 from ZeMusic import app
-
+from strings.filters import command
 
 #---------------FUNCTION---------------#
 
@@ -21,7 +21,7 @@ def get_file_id(msg: Message) -> Optional[Message]:
 #---------------FUNCTION---------------#
 
 
-@app.on_message(filters.command(["تلغراف", "ميديا", "تلكراف", "تلجراف"]))
+@app.on_message(command(["تلغراف", "ميديا", "تلكراف", "تلجراف"]))
 async def telegraph_upload(bot, update):
     replied = update.reply_to_message
     if not replied:
@@ -44,12 +44,9 @@ async def telegraph_upload(bot, update):
         print(error)
         return    
     await text.edit_text(
-        text=f"<b>تم انشاء الرابط 💞 :-</b>\n\n<code>https://te.legra.ph{response[0]}</code>",
+        text=f"<b>⎉╎الــرابـط : </b><a href='https://te.legra.ph{response[0]}'>اضغــط هنـــا</a>\n<b>⎉╎مشاركة : </b><a href='https://telegram.me/share/url?url=https://te.legra.ph{response[0]}'>اضغــط هنـــا</a>",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton(text="🎯 ¦ افـتح الـرابـط", url=f"https://te.legra.ph{response[0]}"),
-            InlineKeyboardButton(text="♻️ ¦ مشـاركه الـرابـط", url=f"https://telegram.me/share/url?url=https://te.legra.ph{response[0]}")
-            ],[
             InlineKeyboardButton(text="✘ اغلاق ✘", callback_data="close")
             ]])
         )
