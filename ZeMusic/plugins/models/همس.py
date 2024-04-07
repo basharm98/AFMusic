@@ -181,3 +181,4 @@ async def cancel_hms(client, callback):
       message_id = callback.message.id,
       text = "-> تم إلغاء الهمسه!\n√")
   
+"""
