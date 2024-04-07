@@ -42,7 +42,7 @@ def hms_start(client, message):
       ]])
     )
 
-@app.on_message(filters.private & filters.text & ~filters.command("ALhms"))
+@app.on_message(filters.private & filters.text & ~filters.command("start"))
 def send_hms(client, message):
   
   global waiting_for_hms
@@ -90,7 +90,17 @@ def display_hms(client, callback):
   app.run()
 
 
+
+
+
+
+
+
+
+
+
 """
+
 
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
