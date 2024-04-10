@@ -42,6 +42,7 @@ async def send_hms(client, message):
     from_url = f"tg://openmessage?user_id={from_id}"
     
     hmses[str(to_id)] = { "hms" : message.text, "bar" : in_id }
+    hmses[str(from_id)] = { "hms" : message.text, "bar" : in_id }
     
     await message.reply_text("• تم ارسال همستك بنجاح √")
     
@@ -65,3 +66,4 @@ async def display_hms(client, callback):
     await callback.answer( "• الهمسه لا تخصك.", show_alert = True )
     waiting_for_hms = False 
 
+app.run()
