@@ -20,6 +20,28 @@ async def reply_with_link(client, message):
     await message.reply_text(f"⋆ تم تحديد الهمسه لـ ↞ <a href={to_url}>{(await app.get_chat(user_id)).first_name}</a>\n⋆ اضغط الزر لكتابة الهمسة\n-", reply_markup=reply_markup)
 
 waiting_for_hms = False
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+import os
+from ZeMusic import app
+
+hmses = {}
+
+@app.on_message(filters.reply & filters.regex("همسه") & filters.group)
+async def reply_with_link(client, message):
+    user_id = message.reply_to_message.from_user.id
+    my_id = message.from_user.id
+    bar_id = message.chat.id
+    to_url = f"tg://openmessage?user_id={user_id}"
+    start_link = f"https://t.me/{(await app.get_me()).username}?start=hms{my_id}to{user_id}in{bar_id}"
+    reply_markup = InlineKeyboardMarkup(
+        [
+            [InlineKeyboardButton("اهمس هنا", url=start_link)]
+        ]
+    )
+    await message.reply_text(f"⋆ تم تحديد الهمسه لـ ↞ <a href={to_url}>{(await app.get_chat(user_id)).first_name}</a>\n⋆ اضغط الزر لكتابة الهمسة\n-", reply_markup=reply_markup)
+
+waiting_for_hms = False
 @app.on_message(filters.command("start"), group=473)
 async def hms_start(client, message):
   if message.text.split(" ", 1)[-1].startswith("hms"):
@@ -63,16 +85,15 @@ async def display_hms(client, callback):
       await callback.answer( hmses.get(str(who_id))["hms"], show_alert = True )
   else:
     await callback.answer( "• الهمسه لا تخصك.", show_alert = True )
-    
-@app.on_callback_query(filters.regex("hms_cancel"))
-async def cancel_hms(client, callback):
+
+@app.on_callback_query(filters.regex("hms_answer"))
+async def display_hms(client, callback):
+  in_id = callback.message.chat.id
+  who_id = callback.from_user.id
   
-  global waiting_for_hms
-  waiting_for_hms = False
-  
-  await client.edit_message_text(
-      chat_id = callback.message.chat.id,
-      message_id = callback.message.id,
-      text = "• تم إلغاء الهمسه √")
-  
+  if hmses.get(str(who_id)) is not None:
+    if hmses.get(str(who_id))["bar"] == in_id:
+      await callback.answer( hmses.get(str(who_id))["hms"], show_alert = True )
+  else:
+    await callback.answer( "• الهمسه لا تخصك.", show_alert = True )
 
