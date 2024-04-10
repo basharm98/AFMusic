@@ -64,5 +64,16 @@ async def display_hms(client, callback):
       await callback.answer( hmses.get(str(who_id))["hms"], show_alert = True )
   else:
     await callback.answer( "• الهمسه لا تخصك.", show_alert = True )
-    waiting_for_hms = False 
     
+@app.on_callback_query(filters.regex("hms_cancel"))
+def display_hms(client, callback):
+  
+  global waiting_for_hms
+  waiting_for_hms = False
+  
+  client.edit_message_text(
+  chat_id = callback.message.chat.id,
+  message_id = callback.message.id,
+  text = "• تم إلغاء الهمسه √")
+  app.run()
+
