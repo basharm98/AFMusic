@@ -1,4 +1,3 @@
-"""
 from pyrogram import filters, Client
 from ZeMusic import app
 import asyncio
@@ -64,4 +63,4 @@ async def strcall(client, message):
         ])
         await message.reply(f"{text}", reply_markup=inline_keyboard)
 
-"""
+
