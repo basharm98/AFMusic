@@ -34,7 +34,7 @@ reply_markup=InlineKeyboardMarkup(
                     
                 
                     InlineKeyboardButton(
-                        config.SUPPORT_NAME, url=config.SUPPORT_CHANNEL),
+                        text=config.SUPPORT_NAME, url=config.SUPPORT_CHANNEL),
                 
         ],
 
