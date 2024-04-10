@@ -65,5 +65,4 @@ async def display_hms(client, callback):
   else:
     await callback.answer( "• الهمسه لا تخصك.", show_alert = True )
     waiting_for_hms = False 
-
-app.run()
+    
