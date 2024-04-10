@@ -1,4 +1,3 @@
-"""
 from pyrogram import Client, filters
 import random
 from ZeMusic import app
@@ -38,4 +37,3 @@ def love_command(client, message):
         response = "Please enter two names after /love command."
     app.send_message(message.chat.id, response)
 
-"""
