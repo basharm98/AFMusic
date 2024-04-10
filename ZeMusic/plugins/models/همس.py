@@ -28,9 +28,6 @@ async def hms_start(client, message):
     waiting_for_hms = True
     await message.reply_text(
       "• اكتب همستك √",
-      reply_markup = InlineKeyboardMarkup ([[
-        InlineKeyboardButton ("إلغاء", callback_data="hms_cancel")
-      ]])
     )
     return
 
@@ -51,7 +48,7 @@ async def send_hms(client, message):
     await app.send_message(
       chat_id = in_id,
       text = f"⋆ الهمسه لـ ↞ <a href={to_url}>{(await app.get_chat(to_id)).first_name}</a>\n⋆ من ↞ <a href={from_url}>{(await app.get_chat(from_id)).first_name}</a>\n-",
-      reply_markup = InlineKeyboardMarkup ([[InlineKeyboardButton("- اضغط لرؤية الهمسه 👀", callback_data = "hms_answer")]])
+      reply_markup = InlineKeyboardMarkup ([[InlineKeyboardButton("• اضغط لرؤية الهمسه.", callback_data = "hms_answer")]])
     )
     
     waiting_for_hms = False
