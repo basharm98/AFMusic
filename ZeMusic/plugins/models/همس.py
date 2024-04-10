@@ -1,8 +1,8 @@
+"""
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import os
 from ZeMusic import app
-import uuid
 
 hmses = {}
 
@@ -42,10 +42,8 @@ async def send_hms(client, message):
     to_url = f"tg://openmessage?user_id={to_id}"
     from_url = f"tg://openmessage?user_id={from_id}"
 
-    #hmses[str(to_id)] = { "hms" : message.text, "bar" : in_id }
-    unique_key = uuid.uuid4().hex
-    hmses[unique_key] = { "to_id": to_id, "hms": message.text, "bar": in_id }
-
+    hmses[str(to_id)] = { "hms" : message.text, "bar" : in_id }
+    
     await message.reply_text("• تم ارسال همستك بنجاح √")
     
     await app.send_message(
@@ -66,4 +64,4 @@ async def display_hms(client, callback):
       await callback.answer( hmses.get(str(who_id))["hms"], show_alert = True )
   else:
     await callback.answer( "• الهمسه لا تخصك.", show_alert = True )
-    
+   """ 
