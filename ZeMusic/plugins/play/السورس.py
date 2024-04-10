@@ -17,7 +17,6 @@ import config
     command(["سورس","‹ السورس ›"," ","السورس"])
 )
 async def huhh(client: Client, message: Message):
-    name = config.SURS_NAME
     await message.reply_photo(
         photo=f"https://graph.org/file/2f199ef466e7950dd5e79.jpg",
         caption = f"""<b>  ⌯ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 . .<br>
@@ -29,7 +28,7 @@ async def huhh(client: Client, message: Message):
                         text="‹ لتنصيب بوت ›", url=f"https://t.me/IC_19"),
                 ],[
                     InlineKeyboardButton(
-                        text=name, url=config.SUPPORT_CHANNEL),
+                        text=config.SURS_NAME, url=config.SUPPORT_CHANNEL),
                 ],
 
             ]
