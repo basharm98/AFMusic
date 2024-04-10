@@ -11,7 +11,7 @@ from strings.filters import command
 from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from ZeMusic import app
 from random import  choice, randint
-
+import config
                 
 @app.on_message(
     command(["سورس","‹ السورس ›"," ","السورس"])
