@@ -41,11 +41,10 @@ async def send_hms(client, message):
     to_url = f"tg://openmessage?user_id={to_id}"
     from_url = f"tg://openmessage?user_id={from_id}"
 
-    if to_id in hmses:
-        hmses[to_id] = [{"hms": message.text, "bar": in_id}]
-    else:
-        hmses[to_id].append({"hms": message.text, "bar": in_id}) 
-    
+    #hmses[str(to_id)] = { "hms" : message.text, "bar" : in_id }
+    unique_key = uuid.uuid4().hex
+    hmses[unique_key] = { "to_id": to_id, "hms": message.text, "bar": in_id }
+
     await message.reply_text("• تم ارسال همستك بنجاح √")
     
     await app.send_message(
@@ -67,15 +66,3 @@ async def display_hms(client, callback):
   else:
     await callback.answer( "• الهمسه لا تخصك.", show_alert = True )
     
-@app.on_callback_query(filters.regex("hms_cancel"))
-def display_hms(client, callback):
-  
-  global waiting_for_hms
-  waiting_for_hms = False
-  
-  client.edit_message_text(
-  chat_id = callback.message.chat.id,
-  message_id = callback.message.id,
-  text = "• تم إلغاء الهمسه √")
-  app.run()
-
