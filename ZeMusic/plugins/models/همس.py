@@ -10,15 +10,14 @@ async def reply_with_link(client, message):
     user_id = message.reply_to_message.from_user.id
     my_id = message.from_user.id
     bar_id = message.chat.id
-    to_id = int(hms_ids.split("to")[-1].split("in")[0])
-    to_url = f"tg://openmessage?user_id={to_id}"
+    to_url = f"tg://openmessage?user_id={user_id}"
     start_link = f"https://t.me/{(await app.get_me()).username}?start=hms{my_id}to{user_id}in{bar_id}"
     reply_markup = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("اهمس هنا", url=start_link)]
         ]
     )
-    await message.reply_text(f"⋆ تم تحديد الهمسه لـ ↞ <a href={to_url}>{(await app.get_chat(to_id)).first_name}</a>\n⋆ اضغط الزر لكتابة الهمسة\n-", reply_markup=reply_markup)
+    await message.reply_text(f"⋆ تم تحديد الهمسه لـ ↞ <a href={to_url}>{(await app.get_chat(user_id)).first_name}</a>\n⋆ اضغط الزر لكتابة الهمسة\n-", reply_markup=reply_markup)
 
 waiting_for_hms = False
 @app.on_message(filters.command("start"), group=473)
