@@ -34,7 +34,7 @@ reply_markup=InlineKeyboardMarkup(
                     
                 
                     InlineKeyboardButton(
-                        "‹ السورس ›", url=f"https://t.me/EF_19"),
+                        config.SUPPORT_NAME, url=config.SUPPORT_CHANNEL),
                 
         ],
 
