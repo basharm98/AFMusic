@@ -42,10 +42,9 @@ async def send_hms(client, message):
     from_url = f"tg://openmessage?user_id={from_id}"
 
     if to_id in hmses:
-        hmses[to_id].append({"hms": message.text, "bar": in_id}) 
-    else:
         hmses[to_id] = [{"hms": message.text, "bar": in_id}]
-
+    else:
+        hmses[to_id].append({"hms": message.text, "bar": in_id}) 
     
     await message.reply_text("• تم ارسال همستك بنجاح √")
     
