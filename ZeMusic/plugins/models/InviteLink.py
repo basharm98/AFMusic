@@ -1,4 +1,3 @@
-"""
 from ZeMusic import app
 from pyrogram import Client, filters
 from pyrogram.errors import ChatIdInvalid
@@ -59,4 +58,3 @@ async def link_command_handler(client: Client, message: Message):
         if os.path.exists(file_name):
             os.remove(file_name)
 
-"""
