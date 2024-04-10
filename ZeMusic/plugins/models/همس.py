@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import os
 from ZeMusic import app
+import uuid
 
 hmses = {}
 
