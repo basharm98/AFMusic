@@ -18,7 +18,7 @@ async def reply_with_link(client, message):
             [InlineKeyboardButton("اهمس هنا", url=start_link)]
         ]
     )
-    await message.reply_text("⋆ تم تحديد الهمسه لـ ↞ <a href={to_url}>{(await app.get_chat(to_id)).first_name}</a>\n⋆ اضغط الزر لكتابة الهمسة\n-", reply_markup=reply_markup)
+    await message.reply_text(f"⋆ تم تحديد الهمسه لـ ↞ <a href={to_url}>{(await app.get_chat(to_id)).first_name}</a>\n⋆ اضغط الزر لكتابة الهمسة\n-", reply_markup=reply_markup)
 
 waiting_for_hms = False
 @app.on_message(filters.command("start"), group=473)
@@ -28,9 +28,9 @@ async def hms_start(client, message):
     hms_ids = message.text
     waiting_for_hms = True
     await message.reply_text(
-      "-> أرسل الهمسه الآن.\n√",
+      "• اكتب همستك √",
       reply_markup = InlineKeyboardMarkup ([[
-        InlineKeyboardButton ("إلغاء ❌️", callback_data="hms_cancel")
+        InlineKeyboardButton ("إلغاء", callback_data="hms_cancel")
       ]])
     )
     return
@@ -47,7 +47,7 @@ async def send_hms(client, message):
     
     hmses[str(to_id)] = { "hms" : message.text, "bar" : in_id }
     
-    await message.reply_text("-> تم ارسال الهمسه.\n√")
+    await message.reply_text("• تم ارسال همستك بنجاح √")
     
     await app.send_message(
       chat_id = in_id,
@@ -66,7 +66,7 @@ async def display_hms(client, callback):
     if hmses.get(str(who_id))["bar"] == in_id:
       await callback.answer( hmses.get(str(who_id))["hms"], show_alert = True )
   else:
-    await callback.answer( "الامر ليس لك ", show_alert = True )
+    await callback.answer( "• الهمسه لا تخصك.", show_alert = True )
     
 @app.on_callback_query(filters.regex("hms_cancel"))
 async def cancel_hms(client, callback):
@@ -77,6 +77,6 @@ async def cancel_hms(client, callback):
   await client.edit_message_text(
       chat_id = callback.message.chat.id,
       message_id = callback.message.id,
-      text = "-> تم إلغاء الهمسه!\n√")
+      text = "• تم إلغاء الهمسه √")
   
 
