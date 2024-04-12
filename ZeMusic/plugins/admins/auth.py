@@ -14,12 +14,12 @@ from ZeMusic.utils.inline import close_markup
 from config import BANNED_USERS, adminlist
 
 
-@app.on_message(filters.command("auth") & filters.group & ~BANNED_USERS)
+@app.on_message(filters.command("رفع ادمن") & filters.group & ~BANNED_USERS)
 @AdminActual
 async def auth(client, message: Message, _):
     if not message.reply_to_message:
-        if len(message.command) != 2:
-            return await message.reply_text(_["general_1"])
+        if "رفع ادمن" not in message.text.split():
+            return
     user = await extract_user(message)
     token = await int_to_alpha(user.id)
     _check = await get_authuser_names(message.chat.id)
