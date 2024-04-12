@@ -80,7 +80,7 @@ async def authusers(client, message: Message, _):
             admin_id = _umm["admin_id"]
             admin_name = _umm["admin_name"]
             try:
-                user = (await app.get_users(user_id)).from_user.mention
+                user = (await app.get_users(user_id)).first_name
                 j += 1
             except:
                 continue
