@@ -26,7 +26,21 @@ from config import BANNED_USERS, lyrical
 
 
 @app.on_message(
-    filters.command(["تشغيل"],"")
+    filters.command(
+        [
+            "play",
+            "تشغيل",
+            "شغل",
+            "vplay",
+            "فديو",
+            "cplay",
+            "cvplay",
+            "playforce",
+            "vplayforce",
+            "cplayforce",
+            "cvplayforce",
+        ],""
+    )
     & ~BANNED_USERS
 )
 @PlayWrapper
@@ -333,7 +347,7 @@ async def play_commnd(
                     _,
                     track_id,
                     user_id,
-                    "ف" if video else "a",
+                    "v" if video else "a",
                     "c" if channel else "g",
                     "f" if fplay else "d",
                 )
@@ -467,7 +481,7 @@ async def play_music(client, CallbackQuery, _):
             _["play_13"],
             reply_markup=InlineKeyboardMarkup(buttons),
         )
-    video = True if mode == "ف" else None
+    video = True if mode == "v" else None
     ffplay = True if fplay == "f" else None
     try:
         await stream(
@@ -532,7 +546,7 @@ async def play_playlists_command(client, CallbackQuery, _):
         _["play_2"].format(channel) if channel else _["play_1"]
     )
     videoid = lyrical.get(videoid)
-    video = True if mode == "ف" else None
+    video = True if mode == "v" else None
     ffplay = True if fplay == "f" else None
     spotify = True
     if ptype == "yt":
