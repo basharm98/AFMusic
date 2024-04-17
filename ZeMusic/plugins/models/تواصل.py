@@ -1,3 +1,4 @@
+"""
 import asyncio
 from pyrogram import Client, filters
 from strings.filters import command
@@ -16,3 +17,4 @@ async def hhhki(client: Client, message: Message):
         await app.send_message(OWNER_ID, f"- قام {mention} \n\n- بارسال رسالة للبوت \n\n- {msg}")
     else:
         print("Received message from unknown user.")
+"""
