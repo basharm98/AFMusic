@@ -7,6 +7,8 @@ from ZeMusic.core.call import Mody, autoend
 from ZeMusic.utils.database import (get_client, is_active_chat, is_autoend)
 from pyrogram.enums import ChatType
 
+
+
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT:
         while not await asyncio.sleep(900):
@@ -17,29 +19,24 @@ async def auto_leave():
                 left = 0
                 try:
                     async for i in client.iter_dialogs():
-                        chat_type = i.ChatType
                         if chat_type in [
                             SUPERGROUP,
                             GROUP ,
                             CHANNEL ,
                         ]:
-                            chat_id = i.chat.id
                             if (
                                 chat_id != config.LOG_GROUP_ID
                                 and chat_id != -1001686672798
-                                and chat_id != -1001840101403
-                                and chat_id != -1001549206010
+                                and chat_id != -1001840101403 and chat_id != -1001549206010
                             ):
                                 if left == 20:
                                     continue
                                 if not await is_active_chat(chat_id):
                                     try:
-                                        await client.leave_chat(
-                                            chat_id
-                                        )
+                                        await client.leave_chat(chat_id)
                                         left += 1
                                     except:
-                                        continue
+                                        continue                
                 except:
                     pass
 
