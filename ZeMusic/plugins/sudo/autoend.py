@@ -14,11 +14,15 @@ async def auto_end_stream(_, message: Message):
     state = message.text.split(None, 1)[1].strip().lower()
     if state == "تفعيل":
         await autoend_on()
+        config.AUTO_LEAVING_ASSISTANT = True
+
         await message.reply_text(
             "تم تفعيل المغادرة التلقائية بنجاح.\n\nسيقوم الحساب المساعد بمغادرة الدردشة تلقائياً عندما لا يوجد أعضاء في المكالمة."
         )
     elif state == "تعطيل":
         await autoend_off()
+        config.AUTO_LEAVING_ASSISTANT = False
+
         await message.reply_text("تم تعطيل المغادرة التلقائية بنجاح.")
     else:
         await message.reply_text(usage)
