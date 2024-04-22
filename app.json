@@ -34,7 +34,7 @@
         "value": "https://graph.org/file/13b3c20fefacb19bc81f7.jpg",
         "required": true
       },
-      //"MONGO_DB_URI": {
+      "MONGO_DB_URI": {
         "description": "لا تغيره. او قم بانشاء قاعده البيانات. الشرح https://t.me/EF_19/2.",
         "value": "mongodb+srv://abood:king@cluster0.rbp1cqz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
         "required": true
