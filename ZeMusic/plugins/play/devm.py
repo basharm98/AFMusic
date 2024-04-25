@@ -16,7 +16,7 @@ async def zdatsr(client: Client, message: Message):
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
     usrnam = usr.username
-    photo = user.photo.big_file_id
+    photo = usr.photo.big_file_id
     photo = await client.download_media(photo)
     #await app.download_media(usr.photo.big_file_id, file_name=os.path.join("downloads", "developer.jpg"))
        
