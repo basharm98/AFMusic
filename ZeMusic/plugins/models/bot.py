@@ -9,8 +9,16 @@ async def BotMusic(client: Client, message: Message):
     italy = message.from_user.mention 
     user_id = message.from_user.id
     chat_id = message.chat.id
-    await message.reply_text(f"<b>⌯ مرحباً عزيزي :</b> {rank}\n<b>⌯ ما هي الاغنيه التي تريد تشغيلها أو البحث عنها</b>")
+    await message.reply_text(f"<b>⌯ مرحباً عزيزي :</b> {italy}\n<b>⌯ ما هي الاغنيه التي تريد تشغيلها أو البحث عنها</b>")
 
+
+
+
+@app.on_message(filters.command("صورتي", prefixes=""))
+async def NameMusic(client: Client, message: Message):
+    async for photo in client.iter_profile_photos(message.from_user.id, limit=1):
+        await message.reply_photo(photo.file_id, caption=f"""<b>↯ ❤️☁️. ›</b>""")
+  
 
 
 
