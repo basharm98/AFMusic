@@ -9,7 +9,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from pyrogram.errors import MessageNotModified
 import config
 
-@app.on_message(filters.command("", prefixes="بوت"))
+@app.on_message(filters.regex(r"^(بوت)$"))
 async def BotMusic(client: Client, message: Message):
     
     italy = message.from_user.mention 
@@ -30,39 +30,26 @@ async def BotMusic(client: Client, message: Message):
         
 
 
-
-@app.on_message(filters.command("صورتي", prefixes=""))
-async def PiMusic(client: Client, message: Message):
-    Usrn= message.from_user.id
-    usr = await client.get_users(Usrn)
-    await app.download_media(usr.photo.big_file_id, file_name=os.path.join("downloads", "developer.jpg")) 
-    await message.reply_photo(photo="downloads/developer.jpg", caption=f"""<b>↯ ❤️☁️. ›</b>""")
-  
-
-
-
-@app.on_message(filters.command("ايدي", prefixes=""))
+@app.on_message(filters.regex(r"^(ايديي|id)$"))
 async def IdMusic(client: Client, message: Message):
     await message.reply_text(f"<b>↯ ID : ›</b> <code>{message.from_user.id}</code>")
 
 
 
 
-@app.on_message(filters.command("اسمي", prefixes=""))
+@app.on_message(filters.regex(r"^(اسمي)$"))
 async def NameMusic(client: Client, message: Message):
     await message.reply_text(f"<b>↯ اسمك : ›</b> {message.from_user.mention}")
 
 
 
-
-@app.on_message(filters.command("يوزري", prefixes=""))
+@app.on_message(filters.regex(r"^(يوزري)$"))
 async def UserMusic(client: Client, message: Message):
     await message.reply_text(f"<b>↯ يوزرك : ›</b> @{message.from_user.username}")
 
 
 
-
-@app.on_message(filters.command("البايو", prefixes=""))
+@app.on_message(filters.regex(r"^(البايو)$"))
 async def BioMusic(client: Client, message: Message):
     usr = await client.get_chat(message.from_user.id)
     bio = usr.bio
@@ -71,7 +58,7 @@ async def BioMusic(client: Client, message: Message):
 
 
 
-@app.on_message(filters.command("", prefixes="بوت الحذف"))
+@app.on_message(filters.regex(r"^(بوت الحذف|رابط الحذف)$"))
 async def DeletMusic(client: Client, message: Message):
     await message.reply_text(f"""<b>↯ بوت الحذف : ›</b> ( @DTeLebot ) ❌\n<b>↯ رابط الحذف : ›</b><a href="https://my.telegram.org/auth?to=delete">( اضغط هنا )</a>""")
 
