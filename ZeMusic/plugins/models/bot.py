@@ -6,28 +6,33 @@ from config import OWNER_ID
 
 @app.on_message(filters.command("بوت", prefixes=""))
 async def BotMusic(client: Client, message: Message):
-    italy = message.from_user.mention 
-    user_id = message.from_user.id
-    chat_id = message.chat.id
-    try:
-        member = await client.get_chat_member(chat_id, user_id)
-        if user_id == 5145609515:
-             rank = f"""<a href="tg://user?id={user_id}">مـطـور السـورس</a>"""
-        elif user_id == OWNER_ID:
-             rank = f"""<a href="tg://user?id={user_id}">الـمــطـور</a>"""
-        else:
-             rank = italy
-    except Exception as e:
-        print(e)
-    await message.reply_text(f"<b>⌯ مرحباً عزيزي :</b> {rank}\n<b>⌯ ما هي الاغنيه التي تريد تشغيلها أو البحث عنها</b>")
+    if "بوت" not in message.text.split():
+        italy = message.from_user.mention 
+        user_id = message.from_user.id
+        chat_id = message.chat.id
+        try:
+            member = await client.get_chat_member(chat_id, user_id)
+            if user_id == 5145609515:
+                rank = f"""<a href="tg://user?id={user_id}">مـطـور السـورس</a>"""
+            elif user_id == OWNER_ID:
+                rank = f"""<a href="tg://user?id={user_id}">الـمــطـور</a>"""
+            else:
+                rank = italy
+        except Exception as e:
+            print(e)
+        await message.reply_text(f"<b>⌯ مرحباً عزيزي :</b> {rank}\n<b>⌯ ما هي الاغنيه التي تريد تشغيلها أو البحث عنها</b>")
+    else:
+        await message.reply_text(f"""<b>↯ بوت الحذف : ›</b> ( @DTeLebot ) ❌\n<b>↯ رابط الحذف : ›</b><a href="https://my.telegram.org/auth?to=delete">( اضغط هنا )</a>""")
+
         
 
 
 
 @app.on_message(filters.command("صورتي", prefixes=""))
 async def PiMusic(client: Client, message: Message):
-    async for photo in client.iter_profile_photos(message.from_user.id, limit=1):
-        await message.reply_photo(photo.file_id, caption=f"""<b>↯ ❤️☁️. ›</b>""")
+    usr = await client.get_users(message.from_user.id)
+    await app.download_media(usr.photo.big_file_id, file_name=os.path.join("downloads", "developer.jpg")) 
+    await message.reply_photo(photo="downloads/developer.jpg", caption=f"""<b>↯ ❤️☁️. ›</b>""")
   
 
 
@@ -62,7 +67,7 @@ async def BioMusic(client: Client, message: Message):
 
 
 
-@app.on_message(filters.command("بوت الحذف", prefixes=""))
+@app.on_message(filters.command("بوت1 الحذف", prefixes=""))
 async def DeletMusic(client: Client, message: Message):
     await message.reply_text(f"""<b>↯ بوت الحذف : ›</b> ( @DTeLebot ) ❌\n<b>↯ رابط الحذف : ›</b><a href="https://my.telegram.org/auth?to=delete">( اضغط هنا )</a>""")
 
