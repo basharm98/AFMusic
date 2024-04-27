@@ -10,7 +10,7 @@ from ZeMusic import app
 from config import OWNER_ID, LOGGER_ID
 
 
-@app.on_message(command(["مطور", "", "المطور"]))
+@app.on_message(command(["مطور", "‹ المطور ›", "المطور"]))
 async def zdatsr(client: Client, message: Message):
     
     usr = await client.get_users(OWNER_ID)
