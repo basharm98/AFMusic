@@ -33,12 +33,12 @@ async def ihd(client: Client, message: Message):
     )
 
 
-"""
-@app.on_message(command(["صوره", "🕷", "‹ صور ›", "صور"]))
+
+@app.on_message(command(["صوره", "‹ صور ›", "صور"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,50)
     url = f"https://t.me/vnnkli/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار صوره اليك",parse_mode="html",
+    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار صوره اليك",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -111,7 +111,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["صور", " ‹ صور ›"]))
+@app.on_message(command(["افتارات بنات", " ‹ صور ›"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/vvyuol/{rl}"
@@ -129,7 +129,7 @@ async def ihd(client: Client, message: Message):
 @app.on_message(command(["داعش", "افتار شباب"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
-    url = f"https://t.me/mlscc_dhsb/{rl}"
+    url = f"https://t.me/e5_58/{rl}"
     await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار الذبح اليك",parse_mode="html",
     reply_markup=InlineKeyboardMarkup(
             [
@@ -155,7 +155,7 @@ async def ihd(client: Client, message: Message):
             ]
         )
     )
-
+"""
 @app.on_message(command(["الشيخ", "النقشبندي", "نقشبندي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,90)
