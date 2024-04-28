@@ -43,7 +43,7 @@ async def ihd(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
+                        message.from_user.first_name, url=f"https://t.me/EF_19")
                 ],
             ]
         )
@@ -54,12 +54,12 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/LoreBots7/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار انمي اليك",parse_mode="html",
+    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار انمي اليك",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
+                        message.from_user.first_name, url=f"https://t.me/EF_19")
                 ],
             ]
         )
@@ -70,12 +70,12 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/GifWaTaN/{rl}"
-    await client.send_animation(message.chat.id,url,caption="↯ : تم اختيار المتحركه اليك",parse_mode="html",
+    await client.send_animation(message.chat.id,url,caption="↯ : تم اختيار المتحركه اليك",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
+                        message.from_user.first_name, url=f"https://t.me/EF_19")
                 ],
             ]
         )
@@ -85,12 +85,12 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/LoreBots9/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار اقتباس اليك",parse_mode="html",
+    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار اقتباس اليك",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
+                        message.from_user.first_name, url=f"https://t.me/EF_19")
                 ],
             ]
         )
@@ -100,12 +100,12 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/flflfldld/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار هيدرات اليك",parse_mode="html",
+    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار هيدرات اليك",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
+                        message.from_user.first_name, url=f"https://t.me/EF_19")
                 ],
             ]
         )
@@ -115,12 +115,12 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/vvyuol/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار صوره اليك",parse_mode="html",
+    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار صوره اليك",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
+                        message.from_user.first_name, url=f"https://t.me/EF_19")
                 ],
             ]
         )
@@ -130,12 +130,12 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/e5_58/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار الذبح اليك",parse_mode="html",
+    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار الذبح اليك",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
+                        message.from_user.first_name, url=f"https://t.me/EF_19")
                 ],
             ]
         )
@@ -145,12 +145,12 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,90)
     url = f"https://t.me/lllIIlIllIlIIlI/{rl}"
-    await client.send_voice(message.chat.id,url,caption="↯ : تم اختيار ايـه قرآنيه اليك",parse_mode="html",
+    await client.send_voice(message.chat.id,url,caption="↯ : تم اختيار ايـه قرآنيه اليك",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
+                        message.from_user.first_name, url=f"https://t.me/EF_19")
                 ],
             ]
         )
