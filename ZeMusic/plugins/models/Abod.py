@@ -111,7 +111,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["افتار بنات", " ‹ افتار بنات ›"]))
+@app.on_message(command(["‹ افتار بنات ›"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/vvyuol/{rl}"
@@ -126,7 +126,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["‹ افتار شباب ›", "افتار شباب"]))
+@app.on_message(command(["‹ افتار شباب ›"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/e5_58/{rl}"
