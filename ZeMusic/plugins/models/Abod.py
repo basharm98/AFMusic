@@ -130,7 +130,7 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/e5_58/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار الذبح اليك",
+    await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار صوره اليك",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -155,50 +155,4 @@ async def ihd(client: Client, message: Message):
             ]
         )
     )
-"""
-@app.on_message(command(["الشيخ", "النقشبندي", "نقشبندي"]))
-async def ihd(client: Client, message: Message):
-    rl = random.randint(1,90)
-    url = f"https://t.me/ggcnjj/{rl}"
-    await client.send_voice(message.chat.id,url,caption="🥹♥ ¦ تـم اختيـار الشيخ نقشبندي اليك",parse_mode="html",
-    reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
-                ],
-            ]
-        )
-    )
 
-@app.on_message(command(["فيلم", "‹ فيلم ›"]))
-async def ihd(client: Client, message: Message):
-    rl = random.randint(1,50)
-    url = f"https://t.me/gyigkk/{rl}"
-    await client.send_audio(message.chat.id,url,caption="↯ : تم اختيار فيلم اليك",parse_mode="html",
-    reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
-                ],
-            ]
-        )
-    )
-
-@app.on_message(command(["استوري", "‹ ستوريات ›"]))
-async def ihd(client: Client, message: Message):
-    rl = random.randint(1,50)
-    url = f"https://t.me/yoipopl/{rl}"
-    await client.send_audio(message.chat.id,url,caption="↯ : تم اختيار استوري اليك",parse_mode="html",
-    reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/Source_Ze")
-                ],
-            ]
-        )
-    )
-
-"""
