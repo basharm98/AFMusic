@@ -129,7 +129,7 @@ async def ihd(client: Client, message: Message):
 @app.on_message(command(["‹ افتار شباب ›"]) & filters.private)
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
-    url = f"https://t.me/E5_58/{rl}"
+    url = f"https://t.me/QrQsQ/{rl}"
     await client.send_photo(message.chat.id,url,caption="↯ : تم اختيار صوره اليك",
     reply_markup=InlineKeyboardMarkup(
             [
