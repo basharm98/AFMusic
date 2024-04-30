@@ -18,7 +18,7 @@ from strings import get_string
 
 from ..formatters import int_to_alpha
 
-"""
+
 def AdminRightsCheck(mystic):
     async def wrapper(client, message):
         if await is_maintenance() is False:
@@ -38,19 +38,19 @@ def AdminRightsCheck(mystic):
             _ = get_string(language)
         except:
             _ = get_string("en")
-        if message.sender_chat:
-            upl = InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ?",
-                            callback_data="ModymousAdmin",
-                        ),
-                    ]
-                ]
-            )
-            return await message.reply_text(_["general_3"], reply_markup=upl)
-        if message.command[0][0] == "c":
+        #if message.sender_chat:
+       #     upl = InlineKeyboardMarkup(
+       #         [
+    #                [
+   #                     InlineKeyboardButton(
+     #                       text="ʜᴏᴡ ᴛᴏ ғɪx ?",
+    #                        callback_data="ModymousAdmin",
+   #                     ),
+   #                 ]
+   #             ]
+  #          )
+  #          return await message.reply_text(_["general_3"], reply_markup=upl)
+        if message.command[0][0] == "":
             chat_id = await get_cmode(message.chat.id)
             if chat_id is None:
                 return await message.reply_text(_["setting_7"])
@@ -72,15 +72,15 @@ def AdminRightsCheck(mystic):
                     if message.from_user.id not in admins:
                         if await is_skipmode(message.chat.id):
                             upvote = await get_upvote_count(chat_id)
-                            text = f<b>ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɴᴇᴇᴅᴇᴅ</b>
+                            text = f"""<b>ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɴᴇᴇᴅᴇᴅ</b>
 
 ʀᴇғʀᴇsʜ ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ ᴠɪᴀ : /reload
 
-» {upvote} ᴠᴏᴛᴇs ɴᴇᴇᴅᴇᴅ ғᴏʀ ᴘᴇʀғᴏʀᴍɪɴɢ ᴛʜɪs ᴀᴄᴛɪᴏɴ.
+» {upvote} ᴠᴏᴛᴇs ɴᴇᴇᴅᴇᴅ ғᴏʀ ᴘᴇʀғᴏʀᴍɪɴɢ ᴛʜɪs ᴀᴄᴛɪᴏɴ."""
 
 
                             command = message.command[0]
-                            if command[0] == "c":
+                            if command[0] == "":
                                 command = command[1:]
                             if command == "speed":
                                 return await message.reply_text(_["admin_14"])
@@ -115,7 +115,7 @@ def AdminRightsCheck(mystic):
 
     return wrapper
 
-"""
+
 def AdminActual(mystic):
     async def wrapper(client, message):
         if await is_maintenance() is False:
