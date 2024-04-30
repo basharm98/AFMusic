@@ -38,19 +38,19 @@ def AdminRightsCheck(mystic):
             _ = get_string(language)
         except:
             _ = get_string("en")
-        #if message.sender_chat:
-       #     upl = InlineKeyboardMarkup(
-       #         [
-    #                [
-   #                     InlineKeyboardButton(
-     #                       text="ʜᴏᴡ ᴛᴏ ғɪx ?",
-    #                        callback_data="ModymousAdmin",
-   #                     ),
-   #                 ]
-   #             ]
-  #          )
-  #          return await message.reply_text(_["general_3"], reply_markup=upl)
-        if message.command[0][0] == "":
+        if message.sender_chat:
+            upl = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="ʜᴏᴡ ᴛᴏ ғɪx ?",
+                            callback_data="ModymousAdmin",
+                        ),
+                    ]
+                ]
+            )
+            return await message.reply_text(_["general_3"], reply_markup=upl)
+        if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
             if chat_id is None:
                 return await message.reply_text(_["setting_7"])
@@ -80,7 +80,7 @@ def AdminRightsCheck(mystic):
 
 
                             command = message.command[0]
-                            if command[0] == "":
+                            if command[0] == "c":
                                 command = command[1:]
                             if command == "speed":
                                 return await message.reply_text(_["admin_14"])
