@@ -1,4 +1,4 @@
-from pyrogram.enums import ChatType
+"""from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from ZeMusic import app
@@ -201,3 +201,4 @@ def ActualAdminCB(mystic):
         return await mystic(client, CallbackQuery, _)
 
     return wrapper
+"""
