@@ -29,19 +29,18 @@ Nem = config.BOT_NAME + " شغل"
     filters.command(
         [
             "play",
-            "",
+            "تشغيل",
+            "شغل",
+            Nem,
             "vplay",
             "فيديو",
-            "cplay",
+            "/cplay",
             "cvplay",
             "playforce",
             "vplayforce",
             "cplayforce",
             "cvplayforce",
-        ],  "/",
-            "تشغيل",
-            "شغل",
-            Nem
+        ],""
     )
     & ~BANNED_USERS
 )
