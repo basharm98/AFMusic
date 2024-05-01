@@ -83,7 +83,7 @@ def AdminRightsCheck(mystic):
                             #if command[0] == "c":
                                 #command = command[1:]
                             command = message.command[0]
-                            if command[2] == "c":
+                            if command[1] == "c":
                                 command = command[2:]
                             if command == "speed":
                                 return await message.reply_text(_["admin_14"])
