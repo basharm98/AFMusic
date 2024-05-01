@@ -50,7 +50,7 @@ def AdminRightsCheck(mystic):
                 ]
             )
             return await message.reply_text(_["general_3"], reply_markup=upl)
-        if message.command[0][0] == "c":
+        if message.command[0][1] == "c":
             chat_id = await get_cmode(message.chat.id)
             if chat_id is None:
                 return await message.reply_text(_["setting_7"])
@@ -79,9 +79,12 @@ def AdminRightsCheck(mystic):
 » {upvote} ᴠᴏᴛᴇs ɴᴇᴇᴅᴇᴅ ғᴏʀ ᴘᴇʀғᴏʀᴍɪɴɢ ᴛʜɪs ᴀᴄᴛɪᴏɴ."""
 
 
+                            #command = message.command[0]
+                            #if command[0] == "c":
+                                #command = command[1:]
                             command = message.command[0]
-                            if command[0] == "c":
-                                command = command[1:]
+                            if len(command) > 1 and command[1] == "c":
+                                command = command[2:]
                             if command == "speed":
                                 return await message.reply_text(_["admin_14"])
                             MODE = command.title()
