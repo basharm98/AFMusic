@@ -29,6 +29,7 @@ Nem = config.BOT_NAME + " شغل"
     filters.command(
         [
             "play",
+            "",
             "vplay",
             "فيديو",
             "cplay",
