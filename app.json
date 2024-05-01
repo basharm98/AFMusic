@@ -29,6 +29,11 @@
         "value": "",
         "required": true
       },
+      "BOT_NAME": {
+        "description": "اسم البوت بالعربي.",
+        "value": "",
+        "required": true
+      },
       "START_IMG_URL": {
         "description": "رابط صوره start او اتركه كما هو.",
         "value": "https://graph.org/file/13b3c20fefacb19bc81f7.jpg",
