@@ -1,4 +1,4 @@
-"""
+
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import os
@@ -64,4 +64,4 @@ async def display_hms(client, callback):
       await callback.answer( hmses.get(str(who_id))["hms"], show_alert = True )
   else:
     await callback.answer( "• الهمسه لا تخصك.", show_alert = True )
-   """ 
+
