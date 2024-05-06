@@ -18,7 +18,7 @@ async def subscription(_, __: Client, message: Message):
 subscribed = filters.create(subscription)
 
 # تعريف دالة لمعالجة الأوامر
-@app.on_message(filters.command(["start", "help"]) & ~subscribed)
+@app.on_message(filters.command(["تشغيل", "شغل"],"") & ~subscribed)
 async def command_handler(_: Client, message: Message):
     if message.chat.type in [ChatType.GROUP, ChatType.SUPERGROUP]:
         user_id = message.from_user.id
