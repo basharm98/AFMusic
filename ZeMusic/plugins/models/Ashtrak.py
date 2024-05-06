@@ -17,15 +17,30 @@ async def subscription(_, __: Client, message: Message):
     
 subscribed = filters.create(subscription)
 
-app.on_message(filters.command(["تشغيل", "شغل"]) & ~subscribed)
-async def checker(_: Client, message: Message):
+# تعريف دالة لمعالجة الأوامر
+@app.on_message(filters.command(["start", "help"]) & ~subscribed)
+async def command_handler(_: Client, message: Message):
     if message.chat.type in [ChatType.GROUP, ChatType.SUPERGROUP]:
         user_id = message.from_user.id
         user = message.from_user.first_name
         markup = Markup([
-            [Button("𝐒𝐎𝐔𝐑𝐂𝐄 𝐊𝐈𝐍𝐆", url=f"https://t.me/{channel}")]
+            [Button("اشتراك في القناة", url=f"https://t.me/{channel}")]
         ])
         await message.reply(
             f"عذرًا عزيزي {user}، عليك الاشتراك في قناة البوت أولاً.",
+            reply_markup=markup
+        )
+
+# تعريف دالة لمعالجة الرسائل العامة
+@app.on_message(~filters.command(["start", "help"]) & ~subscribed)
+async def general_message_handler(_: Client, message: Message):
+    if message.chat.type in [ChatType.GROUP, ChatType.SUPERGROUP]:
+        user_id = message.from_user.id
+        user = message.from_user.first_name
+        markup = Markup([
+            [Button("اشتراك في القناة", url=f"https://t.me/{channel}")]
+        ])
+        await message.reply(
+            f"عذرًا عزيزي {user}، يُرجى استخدام الأوامر فقط. للاطلاع على الأوامر المتاحة اكتب /help.",
             reply_markup=markup
         )
