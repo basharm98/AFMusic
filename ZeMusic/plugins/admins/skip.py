@@ -15,12 +15,8 @@ from strings import get_string
 from strings.filters import command
 
 
-@app.on_message(
-    command(["تخطي"]) & filters.group & ~BANNED_USERS
-)
-@app.on_message(
-    filters.command(["next","cskip","skip"]) & filters.group & ~BANNED_USERS
-)
+@app.on_message(command(["تخطي"]) & filters.group & ~BANNED_USERS)
+@app.on_message(filters.command(["next","cskip","skip"]) & filters.group & ~BANNED_USERS)
 @AdminRightsCheck
 async def skip(cli, message: Message, _, chat_id):
     if not len(message.command) < 2:
@@ -239,12 +235,8 @@ async def skip(cli, message: Message, _, chat_id):
 
 
 
-@app.on_message(
-    command(["تخطي"]) & filters.channel & ~BANNED_USERS
-)
-@app.on_message(
-    filters.command(["next","cskip","skip"]) & filters.channel & ~BANNED_USERS
-)
+@app.on_message(command(["تخطي"]) & filters.channel & ~BANNED_USERS)
+@app.on_message(filters.command(["next","cskip","skip"]) & filters.channel & ~BANNED_USERS)
 async def skip(cli, message: Message):
     try:
         await message.delete()
