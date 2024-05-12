@@ -2,7 +2,7 @@ import asyncio
 
 import random
 
-from AarohiX import app
+from ZeMusic import app
 
 from pyrogram.types import (InlineKeyboardButton,
 
