@@ -7,7 +7,7 @@ Muntazer = "EF_19"
 @app.on_message(filters.private & filters.user(OWNER_ID))
 async def must_join_channel(_, message):
     if "‹ قناة الاشتراك ›" in message.text:
-        link = f"https://t.me/{Muntazer}"
+        link = f"https://t.me/SX3SU{Muntazer}"
         await message.reply(
             text=f"~ عزيزي المطور \n~ هذا هي قناة الاشتراك الاجباري @{Muntazer} .",
             reply_markup=InlineKeyboardMarkup([
