@@ -20,7 +20,7 @@ async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/17382ddaaaba35c95d4c4.jpg",
         caption = f"""<b>  ⌯ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 . .<br>
-        <a href="https://t.me/EF_19"> ⌯ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶 ⛧</a></b>""",
+        <a href="https://t.me/SX3SU"> ⌯ 𝚂𝙾𝚄𝚁𝙲𝙴 ɪʙʀᴀʜɪᴍ ⛧</a></b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
