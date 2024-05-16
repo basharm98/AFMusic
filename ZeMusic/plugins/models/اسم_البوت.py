@@ -6,10 +6,10 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-italy = ["عيون عبود",
-         "روح عبود",
-         "قلب عبود",
-         "حب عبود",
+italy = ["عيون دمار",
+         "روح دمار",
+         "قلب دمار",
+         "حب دمار",
          "شتبي مني",
         "زعلان",
         "مريض"]
