@@ -5,7 +5,7 @@ from pyrogram.enums import ChatType
 from pyrogram.errors import UserNotParticipant
 from ZeMusic import app
 
-channel = "e5_52"
+channel = "SX3SU"
 
 async def subscription(_, __: Client, message: Message):
     user_id = message.from_user.id
